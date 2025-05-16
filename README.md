@@ -43,3 +43,9 @@
 	- the current characterId state variable will be maintained in url
 - Favourites Page:
 	- similar to characters list page, with a heading "Favourites"
+
+// .lintstagedrc is already set up to lint staged files
+// .husky/pre-commit and .husky/pre-push both run npx lint-staged
+// No further action needed unless you want to customize the commands or file patterns
+// If you want to lint only on push (not on commit), you can remove the pre-commit hook and keep only pre-push
+// To do that, simply delete .husky/pre-commit
