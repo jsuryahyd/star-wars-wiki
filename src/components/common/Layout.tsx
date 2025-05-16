@@ -16,9 +16,16 @@ export default function Layout({ children }: LayoutProps) {
       <Box as="header"  py={4} px={6} boxShadow="sm">
         <Flex align="center" maxW="6xl" mx="auto">
           <Spacer />
-          <Heading as="h1" size="lg" textAlign="center" flex="1">
-            Star Wars Wiki
-          </Heading>
+						<Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+							<Heading
+								as="h1"
+								size="lg"
+								textAlign="center"
+								flex="1"
+							>
+								Star Wars Wiki
+							</Heading>
+						</Link>
           <Spacer />
           <IconButton
             as={Link}
