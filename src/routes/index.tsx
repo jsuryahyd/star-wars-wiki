@@ -12,21 +12,17 @@ import {
 export const rootRoute = createRootRoute({
   component: () => (
     <>
-      {/* <div className="p-2 flex gap-2">
-        <Link to="/" className="[&.active]:font-bold">
-          Home
-        </Link>{' '}
-        <Link to="/about" className="[&.active]:font-bold">
-          About
-        </Link>
-      </div>
-      <hr /> */}
 			<Layout>
       	<Outlet />
 			</Layout>
     </>
   ),
 })
+export const HomeRoute = createRoute({
+	getParentRoute: ()=>rootRoute,
+  path: "/",
+  component: CharactersPage,
+});
 
 export const CharactersPageRoute = createRoute({
 	getParentRoute: ()=>rootRoute,
@@ -34,4 +30,4 @@ export const CharactersPageRoute = createRoute({
   component: CharactersPage,
 });
 
-export const routeTree = rootRoute.addChildren([CharactersPageRoute])
+export const routeTree = rootRoute.addChildren([HomeRoute, CharactersPageRoute])

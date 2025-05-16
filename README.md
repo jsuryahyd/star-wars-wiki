@@ -1,17 +1,17 @@
-- # Star Wars Wiki
-- ### Requirements:
+# Star Wars Wiki
+### Requirements:
 	- A wiki website with 3 Pages - Characters List Page,  Character Details Page, Favourites Page
 	- Scalable architecture, and Clean, Readable and testable code. Attention to Details.
 	- React, Typescript and TDD
 	- All pages should be Accessible.
 	- Support light and dark themes.
-- ### Architectural Choices
+### Architectural Choices
 	- An SPA built with React, which can be deployed as a static site.
 		- A Server Rendered site would also makes sense for SEO and faster initial page loads, as we can cache pages with common content.
 	- Monorepo [x]: A monorepo would make more sense if the project is part of a suite of applications and / or a ui component library is needed across the applications
 	- Micro frontends [x]: As the project size increases with large number of screens and multiple teams working on them, a micro frontend architecture would be recommended.
 	- Code splitting and Lazy loading can be implemented as bundle sizes grow, for faster page load times.
-- ### Technology choices:
+### Technology choices:
 	- Node v20 is required for some of the dependancies. It is stable, so using node 20.
 	- React with Typescript for a SPA (setup with vite build tool)
 	- Tanstack router for browser routing
@@ -20,14 +20,14 @@
 	- Context API for global state management
 	- MSW for caching favourites list
 	- Vitest and testing library for component and integration tests
-- ### Others
+### Others
 	- Tools like DataDog, Sentry can be used for monitoring and observability. (Not used currently)
 	- Security
 		- Proper CSP policies must be enforced.
 		- TLS must be used while deploying.
 		- User accounts and Login can be implemented for personalized features like favourites. (Not implemented currently)
 		- dependencies must be audited with npm audit and owasp top 10 vuln.
-- ## Development
+## Development
 - Layout:
 	- A responsive layout that has a header(links to main page, favourites page) and main page, and a footer.
 - Characters List Page:
