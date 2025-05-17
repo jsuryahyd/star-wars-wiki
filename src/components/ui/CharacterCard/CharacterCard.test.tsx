@@ -1,7 +1,7 @@
-import { render, screen, waitFor } from "@/test-utils/render";
+import { render, screen, waitFor, within } from "@/test-utils/render";
 import { CharacterCard } from "./CharacterCard";
 import userEvent from "@testing-library/user-event";
-
+import {Avatar} from "@chakra-ui/react" 
 vi.mock(
   "@tanstack/react-router",
   async (importOriginal: () => Promise<any>) => {
@@ -13,6 +13,21 @@ vi.mock(
     };
   }
 );
+vi.mock("@chakra-ui/react", async (importOriginal: () => Promise<any>) => { 
+  const original = await importOriginal();
+  return {
+    ...original,
+    Avatar: { //generates different ids everytime
+      ...original.Avatar,
+      Root: ({ children, ...props }: any) => (
+        <div {...props}>{children}</div>
+      ),
+      Fallback: () => <div>Fallback</div>,
+      Image: () => <div>Image</div>,
+    },
+  };
+});
+
 describe("CharacterCard", () => {
   it("renders correctly", () => {
     render(
@@ -25,11 +40,7 @@ describe("CharacterCard", () => {
         id="1"
       />
     );
-    expect(screen.getByRole("heading", { level: 3 })).toHaveTextContent(
-      "Jaya Surya"
-    );
-    expect(screen.getByText("Male")).toBeInTheDocument();
-    expect(screen.getByText("Earth")).toBeInTheDocument();
+    testCharacterCard(screen);
   });
 
   it("matches snapshot", () => {
@@ -70,3 +81,14 @@ describe("CharacterCard", () => {
     );
   });
 });
+
+
+export function testCharacterCard(screen:any = screen) {
+  const article = screen.getByRole("article");
+    expect(article).toBeInTheDocument();
+    expect(within(article).getByRole("heading", { level: 3 })).toHaveTextContent(
+      "Jaya Surya"
+    );
+    expect(within(article).getByText("Male")).toBeInTheDocument();
+    expect(within(article).getByText("Earth")).toBeInTheDocument();
+}
