@@ -1,4 +1,4 @@
-import { render, screen } from "@/test-utils/render";
+import { render, screen, waitFor } from "@/test-utils/render";
 import { CharacterCard } from "./CharacterCard";
 import userEvent from "@testing-library/user-event";
 
@@ -28,38 +28,45 @@ describe("CharacterCard", () => {
     expect(screen.getByRole("heading", { level: 3 })).toHaveTextContent(
       "Jaya Surya"
     );
-    expect(
-      screen.getByText("Male")
-    ).toBeInTheDocument();
-		expect(
-		screen.getByText("Earth")).toBeInTheDocument();
+    expect(screen.getByText("Male")).toBeInTheDocument();
+    expect(screen.getByText("Earth")).toBeInTheDocument();
   });
 
-  it('matches snapshot', () => {
-  	const { asFragment } = render(<CharacterCard name="Jaya Surya"
+  it("matches snapshot", () => {
+    render(
+      <CharacterCard
+        name="Jaya Surya"
         details={[
           { label: "gender", value: "Male" },
           { label: "homePlanet", value: "Earth" },
         ]}
-        id="1"/>);
-  	expect(asFragment()).toMatchSnapshot();
+        id="1"
+      />
+    );
+    expect(screen.getByRole("article")).toMatchSnapshot();
   });
 
-	it('renders the top right element', async () => {
-		render(
-			<CharacterCard
-				name="Jaya Surya"
-				details={[]}
-				id="1"
-				renderTopRight={(id)=>{
-					return <span onClick={()=>{const span = document.createElement('span');span.textContent ="click success"; document.body.appendChild(span)}}>Id is {id}</span>
-				}}
-				/>)
+  it("renders the top right element", async () => {
+    const onClick = vi.fn();
+    render(
+      <CharacterCard
+        name="Jaya Surya"
+        details={[]}
+        id="1"
+        renderTopRight={(id) => {
+          return <span onClick={onClick}>Id is {id}</span>;
+        }}
+      />
+    );
 
-		expect(screen.getByText(/Id is 1/i)).toBeInTheDocument();
-		expect(screen.queryByText(/click success/i)).not.toBeInTheDocument();
-		await userEvent.click(screen.getByText(/Id is 1/i));
-		expect(screen.getByText(/click success/i)).toBeInTheDocument();
-
-	})
+    expect(screen.getByText(/Id is 1/i)).toBeInTheDocument();
+    expect(screen.queryByText(/click success/i)).not.toBeInTheDocument();
+    await userEvent.click(screen.getByText(/Id is 1/i));
+    await waitFor(
+      () => {
+        expect(onClick).toHaveBeenCalled();
+      },
+      { timeout: 1000 }
+    );
+  });
 });
