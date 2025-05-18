@@ -154,7 +154,7 @@ describe("CharactersPage", () => {
     );
   });
 
-  test.only("cards reset when search is cleared via refresh button", async () => {
+  test("cards reset when search is cleared via refresh button", async () => {
     const { router } = render(<CharactersPage />, { routes });
     await act(() =>
       router.navigate({
