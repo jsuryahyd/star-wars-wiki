@@ -3,7 +3,7 @@ import { http, HttpResponse } from "msw";
 import defaultFavourites from "./mock-data/favourites.json";
 import defaultCharacters from "./mock-data/characters.json";
 import {type favourite, getAllFavourites, addFavourite, removeFavourite} from "./db"
-// console.log(import.meta.env)
+console.log(import.meta.env)
 
 
 

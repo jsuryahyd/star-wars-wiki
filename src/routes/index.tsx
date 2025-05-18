@@ -1,4 +1,5 @@
 import Layout from '@/components/common/Layout';
+import CharacterDetailsPage from '@/pages/CharacterDetailsPage/CharacterDetailsPage';
 import CharactersPage from '@/pages/CharactersPage/CharactersPage';
 import FavouritesPage from '@/pages/FavouritesPage/FavouritesPage';
 import {
@@ -31,10 +32,16 @@ export const CharactersPageRoute = createRoute({
   component: CharactersPage,
 });
 
+export const CharactersDetailsRoute = createRoute({
+	getParentRoute: ()=>rootRoute,
+  path: "/character-details/$id",
+  component: CharacterDetailsPage,
+});
+
 export const FavouritesPageRoute = createRoute({
   getParentRoute: ()=>rootRoute,
   path: "/favourites",
   component: FavouritesPage,
 });
 
-export const routeTree = rootRoute.addChildren([HomeRoute, CharactersPageRoute, FavouritesPageRoute])
+export const routeTree = rootRoute.addChildren([HomeRoute, CharactersPageRoute, FavouritesPageRoute, CharactersDetailsRoute])
