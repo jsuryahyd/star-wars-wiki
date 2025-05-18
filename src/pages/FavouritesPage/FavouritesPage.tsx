@@ -147,6 +147,7 @@ function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
           <CharacterCard
             key={character.uid}
             name={character.name}
+						avatarUrl={character.avatarUrl}
             details={[
               { label: "Gender", value: capitalize(character.gender) },
               { label: "Home Planet", value: character.homeWorld },
