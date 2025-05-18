@@ -48,7 +48,7 @@ export let handlers = [
   }),
 ];
 
-if (isTestingEnv || true) {
+if (isTestingEnv) {
   handlers = handlers.concat([
     http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people/:id", (req) => {
       const { id } = req.params;
@@ -85,7 +85,7 @@ if (isTestingEnv || true) {
     }),
     // Mock handlers for SWAPI endpoints (for testing)
     http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people*", (req: any) => {
-      console.log("Response from msw handler:", req.request.url);
+      // console.log("Response from msw handler:", req.request.url);
       let charactersList = [...characters];
 
       const params = new URL(req.request.url).searchParams;
@@ -258,7 +258,7 @@ if (isTestingEnv || true) {
     }),
     http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/planets/:id", (req) => {
       const { id } = req.params;
-      console.log("Request to SWAPI:", req.request.url);
+      // console.log("Request to SWAPI:", req.request.url);
       // Mock response for the planet details endpoint
       return HttpResponse.json({
         message: "ok",

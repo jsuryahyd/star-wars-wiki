@@ -10,6 +10,10 @@ exports[`CharacterCard > matches snapshot 1`] = `
     <div
       class="chakra-card__root css-fgvmqn"
     >
+      <a
+        href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+        style="position: absolute; top: 0.5rem; right: 0.5rem;"
+      />
       <div
         class="css-10zhkx9"
       >

@@ -45,7 +45,6 @@ describe("Pagination", () => {
 			})).toHaveAttribute("aria-current", "page");
 		}
 	}
-	screen.debug(pagination);
   });
 	
 
