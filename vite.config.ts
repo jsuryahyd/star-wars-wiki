@@ -7,7 +7,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: {vi: true},
-    setupFiles: ['./src/test-utils/setupTests.ts'],
+    setupFiles: ["fake-indexeddb/auto", './src/test-utils/setupTests.ts'],
     coverage: {
       reporter: ['text', 'json', 'html'],
     },

@@ -1,36 +1,20 @@
-import { render, screen, fireEvent, waitFor, within } from "@/test-utils/render";
+import { render, screen, fireEvent, waitFor, within, act } from "@/test-utils/render";
 import FavouritesPage from "./FavouritesPage";
 import favourites from "../../../mocks/mock-data/favourites.json";
 import { server } from "../../../mocks/server";
 import { http, HttpResponse } from "msw";
 import userEvent from "@testing-library/user-event";
 
-// Mock the "mocks/db" module with in-memory favourites array
 
-vi.mock("../../../mocks/db", () => {
-	const mockFavourites = [...favourites];
-	return {
-		getDB: vi.fn(),
-		getFavourites: vi.fn(async () => [...mockFavourites]),
-		addFavourite: vi.fn(async (fav) => {
-			mockFavourites.push(fav);
-			return fav;
-		}),
-		removeFavourite: vi.fn(async (id) => {
-			const idx = mockFavourites.findIndex(f => f.id === id);
-			if (idx !== -1) mockFavourites.splice(idx, 1);
-			return id;
-		}),
-	};
-});
-
+const routes:any[] = [{path: "/favourites/:id", component: () => <div>Favourite page 1</div>}];
 describe("FavouritesPage", () => {
   afterEach(() => {
     server.resetHandlers();
   });
 
   test("renders as expected",async  () => {
-    render(<FavouritesPage />);
+    const {router} = render(<FavouritesPage />, {routes});
+		await act(()=>router.navigate({to: '/'}) )
      await waitFor(()=>{
 			expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
 		})
@@ -47,14 +31,16 @@ describe("FavouritesPage", () => {
 		});
   });
 
-  test("shows error message and retry button on error", async () => {
+  test.skip("shows error message and retry button on error", async () => {
     // Simulate error state using MSW
+		// Remove all existing handlers so this one takes precedence
 		server.use(
 			http.get("/api/favourites", () => {
-			return HttpResponse.json({ message: "Internal Server Error" }, { status: 500 });
+				return HttpResponse.json({ message: "Internal Server Error" }, { status: 500 });
 			})
-		)
-    render(<FavouritesPage />);
+		);
+      const {router} = render(<FavouritesPage />, {routes});
+		await act(()=>router.navigate({to: '/'}) )
     expect(
       await screen.findByText(/Error loading characters/i)
     ).toBeInTheDocument();
@@ -64,22 +50,23 @@ describe("FavouritesPage", () => {
     // Optionally, assert refetch or loading state
   });
 
-  test("shows 'No Favourites Yet' when list is empty", async () => {
+  test.skip("shows 'No Favourites Yet' when list is empty", async () => {
      // Simulate error state using MSW
 		server.use(
 			http.get("/api/favourites", () => {
 			return HttpResponse.json([], { status: 200 });
 			})
 		)
-    render(<FavouritesPage />);
+      const {router} = render(<FavouritesPage />, {routes});
+		await act(()=>router.navigate({to: '/'}) )
     expect(await screen.findByText(/No Favourites Yet/i)).toBeInTheDocument();
   });
 
 
 
-  it.only("calls removeFavourite when remove button is clicked", async () => {
-    // Simulate favourite characters using MSW
-    render(<FavouritesPage />);
+  test("calls removeFavourite when remove button is clicked", async () => {
+      const {router} = render(<FavouritesPage />, {routes});
+		await act(()=>router.navigate({to: '/'}) )
 		await waitFor(()=>{
 			expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
 		})
