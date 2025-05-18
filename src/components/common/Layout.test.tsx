@@ -21,7 +21,7 @@ describe("layout page tests", () => {
     screen.getByText(text);
 
 		const footer = screen.getByRole('contentinfo')
-		expect(footer).toHaveTextContent(/©*jayasurya/i)
+		expect(footer).toHaveTextContent(/©*jaya surya/i)
   });
 
 	

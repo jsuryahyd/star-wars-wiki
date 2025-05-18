@@ -12,10 +12,9 @@ export default function Layout({ children }: LayoutProps) {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Flex direction="column" minH="100vh">
-      {/* Header */}
       <Box as="header"  py={4} px={6} boxShadow="sm">
         <Flex align="center" maxW="6xl" mx="auto">
-          <Spacer />
+          <Spacer display={{ base: "none", md: "flex" }}/>
 						<Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
 							<Heading
 								as="h1"
@@ -47,14 +46,14 @@ export default function Layout({ children }: LayoutProps) {
         </Flex>
       </Box>
 
-      {/* Main Content */}
+      
       <Box as="main" flex="1" py={8} px={4} maxW="6xl" mx="auto" w="100%">
         {children}
       </Box>
 
-      {/* Footer */}
+
       <Box as="footer" bg="gray.900" color="gray.300" py={3} textAlign="center">
-        <Text fontSize="sm">&copy; {new Date().getFullYear()} Jayasurya</Text>
+        <Text fontSize="sm">&copy; {new Date().getFullYear()} Jaya Surya</Text>
       </Box>
     </Flex>
   )
