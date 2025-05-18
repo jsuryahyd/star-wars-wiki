@@ -1,5 +1,6 @@
 import Layout from '@/components/common/Layout';
 import CharactersPage from '@/pages/CharactersPage/CharactersPage';
+import FavouritesPage from '@/pages/FavouritesPage/FavouritesPage';
 import {
   Outlet,
   RouterProvider,
@@ -30,4 +31,10 @@ export const CharactersPageRoute = createRoute({
   component: CharactersPage,
 });
 
-export const routeTree = rootRoute.addChildren([HomeRoute, CharactersPageRoute])
+export const FavouritesPageRoute = createRoute({
+  getParentRoute: ()=>rootRoute,
+  path: "/favourites",
+  component: FavouritesPage,
+});
+
+export const routeTree = rootRoute.addChildren([HomeRoute, CharactersPageRoute, FavouritesPageRoute])

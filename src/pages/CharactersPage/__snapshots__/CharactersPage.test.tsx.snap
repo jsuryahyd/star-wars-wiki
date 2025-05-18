@@ -15,45 +15,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rb»"
             name="Luke Skywalker 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rb»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rb»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -89,45 +66,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rc»"
             name="C-3PO 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rc»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rc»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -163,45 +117,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rd»"
             name="R2-D2 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rd»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rd»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -237,45 +168,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«re»"
             name="Darth Vader 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«re»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«re»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -311,45 +219,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rf»"
             name="Leia Organa 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rf»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rf»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -385,45 +270,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rg»"
             name="Owen Lars 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rg»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rg»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -459,45 +321,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rh»"
             name="Beru Whitesun lars 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rh»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rh»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -533,45 +372,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«ri»"
             name="R5-D4 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«ri»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«ri»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -607,45 +423,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rj»"
             name="Biggs Darklighter 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rj»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rj»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -681,793 +474,22 @@ exports[`CharactersPage > Pagination works 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rk»"
             name="Obi-Wan Kenobi 2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rk»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rk»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Obi-Wan Kenobi 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-</section>
-`;
-
-exports[`CharactersPage > Pagination works 2`] = `
-<section
-  aria-label="characters list"
-  class="css-1d7ldso"
->
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/1"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1d»"
-            name="Luke Skywalker 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1d»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1d»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Luke Skywalker 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/2"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1e»"
-            name="C-3PO 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1e»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1e»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              C-3PO 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/3"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1f»"
-            name="R2-D2 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1f»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1f»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              R2-D2 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/4"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1g»"
-            name="Darth Vader 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1g»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1g»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Darth Vader 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/5"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1h»"
-            name="Leia Organa 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1h»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1h»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Leia Organa 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/6"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1i»"
-            name="Owen Lars 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1i»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1i»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Owen Lars 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/7"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1j»"
-            name="Beru Whitesun lars 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1j»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1j»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Beru Whitesun lars 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/8"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1k»"
-            name="R5-D4 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1k»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1k»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              R5-D4 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/9"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1l»"
-            name="Biggs Darklighter 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1l»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1l»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Biggs Darklighter 2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/10"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1m»"
-            name="Obi-Wan Kenobi 2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1m»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1m»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -1511,45 +533,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r2»"
             name="Luke Skywalker"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r2»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r2»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -1585,45 +584,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r3»"
             name="C-3PO"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r3»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r3»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -1659,45 +635,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r4»"
             name="R2-D2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r4»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r4»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -1733,45 +686,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r5»"
             name="Darth Vader"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r5»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r5»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -1807,45 +737,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r6»"
             name="Leia Organa"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r6»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r6»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -1881,45 +788,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r7»"
             name="Owen Lars"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r7»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r7»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -1955,45 +839,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r8»"
             name="Beru Whitesun lars"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r8»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r8»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -2029,45 +890,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r9»"
             name="R5-D4"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r9»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r9»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -2103,45 +941,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«ra»"
             name="Biggs Darklighter"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«ra»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«ra»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -2177,793 +992,22 @@ exports[`CharactersPage > cards reset when search is cleared 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rb»"
             name="Obi-Wan Kenobi"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rb»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rb»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Obi-Wan Kenobi
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-</section>
-`;
-
-exports[`CharactersPage > cards reset when search is cleared 2`] = `
-<section
-  aria-label="characters list"
-  class="css-1d7ldso"
->
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/1"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rc»"
-            name="Luke Skywalker"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rc»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rc»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Luke Skywalker
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/2"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rd»"
-            name="C-3PO"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rd»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rd»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              C-3PO
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/3"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«re»"
-            name="R2-D2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«re»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«re»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              R2-D2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/4"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rf»"
-            name="Darth Vader"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rf»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rf»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Darth Vader
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/5"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rg»"
-            name="Leia Organa"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rg»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rg»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Leia Organa
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/6"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rh»"
-            name="Owen Lars"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rh»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rh»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Owen Lars
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/7"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«ri»"
-            name="Beru Whitesun lars"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«ri»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«ri»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Beru Whitesun lars
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/8"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rj»"
-            name="R5-D4"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rj»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rj»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              R5-D4
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/9"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rk»"
-            name="Biggs Darklighter"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rk»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rk»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Biggs Darklighter
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/10"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rl»"
-            name="Obi-Wan Kenobi"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rl»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rl»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -3007,6 +1051,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3054,6 +1102,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3101,6 +1153,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3148,6 +1204,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3195,6 +1255,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3242,6 +1306,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3289,6 +1357,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3336,6 +1408,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3383,6 +1459,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3430,6 +1510,10 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
@@ -3442,754 +1526,6 @@ exports[`CharactersPage > cards reset when search is cleared via refresh button 
             <div>
               Image
             </div>
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Obi-Wan Kenobi
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-</section>
-`;
-
-exports[`CharactersPage > cards reset when search is cleared via refresh button 2`] = `
-<section
-  aria-label="characters list"
-  class="css-1d7ldso"
->
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/1"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r2»"
-            name="Luke Skywalker"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r2»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r2»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Luke Skywalker
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/2"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r3»"
-            name="C-3PO"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r3»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r3»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              C-3PO
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/3"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r4»"
-            name="R2-D2"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r4»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r4»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              R2-D2
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/4"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r5»"
-            name="Darth Vader"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r5»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r5»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Darth Vader
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/5"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r6»"
-            name="Leia Organa"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r6»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r6»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Leia Organa
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/6"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r7»"
-            name="Owen Lars"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r7»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r7»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Owen Lars
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/7"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r8»"
-            name="Beru Whitesun lars"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r8»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r8»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Beru Whitesun lars
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/8"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r9»"
-            name="R5-D4"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r9»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r9»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              R5-D4
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/9"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«ra»"
-            name="Biggs Darklighter"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«ra»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«ra»:image"
-              referrerpolicy="no-referrer"
-            />
-          </div>
-          <div
-            class="chakra-stack css-8g8ihq"
-            spacing="1"
-          >
-            <h3
-              class="chakra-heading css-9nm8pf"
-            >
-              Biggs Darklighter
-            </h3>
-            <p
-              class="css-v0otzr"
-            >
-              Male
-            </p>
-            <p
-              class="css-v0otzr"
-            >
-              Tatooine
-            </p>
-          </div>
-        </div>
-      </div>
-    </a>
-  </article>
-  <article
-    class="chakra-linkbox css-14g7ltz"
-  >
-    <a
-      class="chakra-linkbox__overlay css-nzdyzb"
-      href="/characters/10"
-    >
-      <div
-        class="chakra-card__root css-fgvmqn"
-      >
-        <div
-          class="css-10zhkx9"
-        >
-          <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«rb»"
-            name="Obi-Wan Kenobi"
-          >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«rb»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«rb»:image"
-              referrerpolicy="no-referrer"
-            />
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4233,45 +1569,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r1»"
             name="Luke Skywalker"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r1»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r1»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4307,45 +1620,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r2»"
             name="C-3PO"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r2»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r2»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4381,45 +1671,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r3»"
             name="R2-D2"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r3»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r3»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4455,45 +1722,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r4»"
             name="Darth Vader"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r4»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r4»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4529,45 +1773,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r5»"
             name="Leia Organa"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r5»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r5»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4603,45 +1824,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r6»"
             name="Owen Lars"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r6»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r6»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4677,45 +1875,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r7»"
             name="Beru Whitesun lars"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r7»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r7»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4751,45 +1926,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r8»"
             name="R5-D4"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r8»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r8»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4825,45 +1977,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«r9»"
             name="Biggs Darklighter"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«r9»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«r9»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"
@@ -4899,45 +2028,22 @@ exports[`CharactersPage > loads and displays characters 1`] = `
       <div
         class="chakra-card__root css-fgvmqn"
       >
+        <a
+          href="javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')"
+          style="position: absolute; top: 0.5rem; right: 0.5rem;"
+        />
         <div
           class="css-10zhkx9"
         >
           <div
-            class="chakra-avatar__root css-pckxl"
-            data-part="root"
-            data-scope="avatar"
-            dir="ltr"
-            id="avatar:«ra»"
             name="Obi-Wan Kenobi"
           >
-            <span
-              class="chakra-avatar__fallback css-1cuxwyn"
-              data-part="fallback"
-              data-scope="avatar"
-              data-state="visible"
-              dir="ltr"
-              id="avatar:«ra»:fallback"
-            >
-              <svg
-                class="css-1dklkmj"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                />
-              </svg>
-            </span>
-            <img
-              class="chakra-avatar__image css-1odw0y2"
-              data-part="image"
-              data-scope="avatar"
-              data-state="hidden"
-              dir="ltr"
-              draggable="false"
-              hidden=""
-              id="avatar:«ra»:image"
-              referrerpolicy="no-referrer"
-            />
+            <div>
+              Fallback
+            </div>
+            <div>
+              Image
+            </div>
           </div>
           <div
             class="chakra-stack css-8g8ihq"

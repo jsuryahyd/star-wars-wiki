@@ -103,7 +103,7 @@ describe("CharactersPage", () => {
         ).getAllByRole("article"); //important: do not use charactersGrid here, it will be stale
         // console.log(router.latestLocation, "location");//works fine
 
-        console.log(articles.length, "num articles");
+        // console.log(articles.length, "num articles");
         expect(articles.length).toBe(1);
       },
       { timeout: 2000 }
@@ -154,7 +154,7 @@ describe("CharactersPage", () => {
     );
   });
 
-  test.only("cards reset when search is cleared via refresh button", async () => {
+  test("cards reset when search is cleared via refresh button", async () => {
     const { router } = render(<CharactersPage />, { routes });
     await act(() =>
       router.navigate({
@@ -214,10 +214,9 @@ describe("CharactersPage", () => {
     expect(prevButton).toBeInTheDocument();
     expect(prevButton).toBeDisabled();
     expect(nextButton).not.toBeDisabled();
-    console.log("before");
-    screen.debug(prevButton);
+  
     await userEvent.click(nextButton);
-    console.log("after");
+
     //todo: whole pagination component is replaced, as for some reason, totalPageCount is becoming 0 intermittently.
     pagination = await screen.findByRole("navigation", {
       name: "pagination",

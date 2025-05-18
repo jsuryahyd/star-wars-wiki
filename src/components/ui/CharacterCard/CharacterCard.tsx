@@ -40,8 +40,8 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
       _hover={{ transform: "scale(1.02)" }}
     >
       <LinkOverlay as={RouterLink} to={`/characters/${id}`}>
-        {renderTopRight?.(id)}
         <Card.Root>
+          <a href="javascript:void(0);/*to prevent propagation to outer link*/" style={{position: 'absolute', top: '0.5rem', right: '0.5rem'}}>{renderTopRight?.(id)}</a>
           <Flex align="center" gap={4} p={4}>
             <Avatar.Root size="2xl" name={name}>
               <Avatar.Fallback />

@@ -1,0 +1,18 @@
+[
+	{
+		"uid": "1",
+		"name": "Luke Skywalker",
+		"url": "https://www.swapi.tech/api/people/1",
+		"gender": "Male",
+		"homeWorld": "Tatooine",
+		"height": "172"
+	},
+	{
+		"uid": "2",
+		"name": "C-3PO",
+		"url": "https://www.swapi.tech/api/people/2",
+		"gender": "Male",
+		"homeWorld": "Tatooine",
+		"height": "167"
+	}
+]

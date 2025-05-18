@@ -168,6 +168,7 @@ function CharactersGrid({ charactersData }: any) {
         return (
           <CharacterCard
             key={character.uid}
+            avatarUrl={character.imageUrl}
             name={character.name}
             details={[
               { label: "Gender", value: capitalize(character.gender) },

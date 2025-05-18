@@ -13,6 +13,7 @@ interface CharacterWithDetails {
   gender: string;
   homeworldName: string;
   uid: string;
+	imageUrl?: string
 }
 
 export default function useCharactersList({
@@ -42,17 +43,7 @@ export default function useCharactersList({
           };
         }
         return res as charactersListResponse;
-      }),
-    // keepPreviousData: true,
-    select: (data) => ({
-      ...data,
-      total: data?.count || 0, // Extract total count for pagination
-    }),
-    onSuccess: (data: any) => {
-      if (data?.total) {
-        // usePagination.setTotal(data.total);
-      }
-    },
+      })
   });
 
   const characterDetailsQueries = useQueries({
@@ -80,15 +71,20 @@ export default function useCharactersList({
   // Combine the data
   const charactersWithDetails: CharacterWithDetails[] = useMemo(() => {
     return (charactersData?.results || []).map((character, index) => {
+			let gender = characterDetailsQueries[index]?.data?.result?.properties?.gender
+			if(gender === 'n/a') {
+				gender = "N/A"
+			}
       return {
         name: character.name,
         url: character.url,
         uid: character.uid,
         gender:
-          characterDetailsQueries[index]?.data?.result?.properties?.gender ||
+          gender ||
           "Unknown",
         homeworldName:
           homeworldQueries[index]?.data?.result?.properties?.name || "Unknown",
+					imageUrl:'/assets/images/'+character.uid+'.png'
       };
     });
   }, [charactersData?.results, characterDetailsQueries, homeworldQueries]);
@@ -106,7 +102,7 @@ export default function useCharactersList({
   return {
     isCharactersError,
     isCharactersLoading,
-    charactersWithDetails,
+    charactersWithDetails: charactersWithDetails || [],
     refetch,
     initialError,
     charactersData,
