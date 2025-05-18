@@ -102,7 +102,7 @@ describe("CharacterDetailsPage", () => {
 		})
 	})
 
-	test("Favourite and unFavourite actions work as expected", ()=>{
+	test("Favourite and unFavourite actions work as expected", async ()=>{
 		const { router } = render(<CharacterDetailsPage />, { routes });
 		await act(() => {
 			router.navigate({
