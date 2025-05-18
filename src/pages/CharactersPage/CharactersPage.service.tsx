@@ -87,17 +87,3 @@ export function fetchCharacterDetails(url: string): Promise<characterDetailsResp
 			throw error;
 		});
 }
-
-export function fetchPlanet(url: string): Promise<{result: {properties: any, uid: string, description: string}}> {
-	return fetch(url)
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error("Network response was not ok");
-			}
-			return response.json();
-		})
-		.catch((error) => {
-			console.error("Error fetching planet details:", error);
-			throw error;
-		});
-}

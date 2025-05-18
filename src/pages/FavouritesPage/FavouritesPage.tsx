@@ -15,7 +15,7 @@ import { CharacterCard } from "@/components/ui/CharacterCard/CharacterCard";
 import useFavouritesList from "@/hooks/useFavouritesList";
 import { LuCross, LuDelete, LuListX, LuTrash, LuX } from "react-icons/lu";
 import { useMutation } from "@tanstack/react-query";
-import { removeFavourite } from "./Favourites.service";
+import { removeFavourite } from "@/services/services";
 import SearchInput from "@/components/ui/SearchInput/SearchInput";
 import { useState } from "react";
 

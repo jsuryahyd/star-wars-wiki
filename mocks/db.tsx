@@ -35,3 +35,8 @@ export async function removeFavourite(uid: string): Promise<void> {
   const db = await getDB();
   await db.delete(STORE_NAME, uid);
 }
+
+export async function getFavouriteById(uid: string): Promise<favourite | undefined> {
+  const db = await getDB();
+  return (await db.get(STORE_NAME, uid)) as favourite;
+}

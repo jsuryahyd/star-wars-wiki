@@ -2,7 +2,10 @@ import { http, HttpResponse } from "msw";
 
 import defaultFavourites from "./mock-data/favourites.json";
 import defaultCharacters from "./mock-data/characters.json";
-import {type favourite, getAllFavourites, addFavourite, removeFavourite} from "./db"
+import film from "./mock-data/film.json";
+import starship from "./mock-data/starship.json";
+import mockUserData from "./mock-data/user.json";
+import {type favourite, getAllFavourites, addFavourite, removeFavourite, getFavouriteById} from "./db"
 console.log(import.meta.env)
 
 
@@ -27,12 +30,12 @@ export let handlers = [
   http.post("/api/favourites", async (req) => {
     const newFavourite = (await req.request.json()) as favourite;
     if (!newFavourite) return HttpResponse.json({ error: "Invalid request" });
-    if (!favourites.find((fav) => fav.uid === newFavourite.uid)) {
+    
       await addFavourite(newFavourite);
-      return HttpResponse.json({ message: "Character added to favourites" });
-    } else {
-      return HttpResponse.json({ message: "Character already in favourites" });
-    }
+      return HttpResponse.json({
+        message: "Character added to favourites",
+        favourite: newFavourite,
+      });
   }),
 
   // Handler for removing a character from favorites
@@ -46,6 +49,13 @@ export let handlers = [
   http.get("/api/favourites", async (req) => {
     return HttpResponse.json(await getAllFavourites());
   }),
+
+  http.get("/api/favourites/is-favourite/:id", async (req) => {
+    const { id } = req.params;
+    const fav = await getFavouriteById(id as string)
+    console.log("is-favourite", fav);
+    return HttpResponse.json(fav ? 1 : 0);
+  })
 ];
 
 if (isTestingEnv) {
@@ -55,33 +65,7 @@ if (isTestingEnv) {
       //gen random planet id from 1 to 60
       const planetId = Math.floor(Math.random() * 60) + 1;
       // Mock response for the character details endpoint
-      return HttpResponse.json({
-        message: "ok",
-        result: {
-          properties: {
-            created: "2025-05-15T20:25:38.019Z",
-            edited: "2025-05-15T20:25:38.019Z",
-            name: "Luke Skywalker",
-            gender: "male",
-            skin_color: "fair",
-            hair_color: "blond",
-            height: "172",
-            eye_color: "blue",
-            mass: "77",
-            homeworld: "https://www.swapi.tech/api/planets/" + planetId,
-            birth_year: "19BBY",
-            url: "https://www.swapi.tech/api/people/" + id,
-          },
-          _id: "5f63a36eee9fd7000499be42",
-          description: "A person within the Star Wars universe",
-          uid: id,
-          __v: 2,
-        },
-        apiVersion: "1.0",
-        timestamp: "2025-05-16T16:24:07.361Z",
-        support: {},
-        social: {},
-      });
+      return HttpResponse.json(mockUserData);
     }),
     // Mock handlers for SWAPI endpoints (for testing)
     http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people*", (req: any) => {
@@ -109,7 +93,7 @@ if (isTestingEnv) {
         total_records: 82,
         total_pages: 9,
         previous: null,
-        next: "https://swapi.tech/api/people?page=2&limit=10",
+        next: import.meta.env.VITE_SWAPI_BASE_URL+"/people?page=2&limit=10",
         results: name ? undefined : charactersList,
         result: name
           ? charactersList.map((c) => {
@@ -143,83 +127,16 @@ if (isTestingEnv) {
       });
     }),
 
-    http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/films/", (req) => {
+    http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/films/:id", (req) => {
+      const { id } = req.params;
       // Mock response for the films endpoint
-      return HttpResponse.json({
-        count: 6,
-        next: null,
-        previous: null,
-        results: [
-          {
-            title: "A New Hope",
-            episode_id: 4,
-            opening_crawl: "...",
-            director: "George Lucas",
-            producer: "Gary Kurtz, Rick McCallum",
-            release_date: "1977-05-25",
-            characters: [
-              import.meta.env.VITE_SWAPI_BASE_URL + "/people/1/",
-              // ...
-            ],
-            planets: [
-              import.meta.env.VITE_SWAPI_BASE_URL + "/planets/1/",
-              // ...
-            ],
-            starships: [
-              import.meta.env.VITE_SWAPI_BASE_URL + "/starships/2/",
-              // ...
-            ],
-            vehicles: [
-              import.meta.env.VITE_SWAPI_BASE_URL + "/vehicles/4/",
-              // ...
-            ],
-            species: [
-              import.meta.env.VITE_SWAPI_BASE_URL + "/species/1/",
-              // ...
-            ],
-            created: "2014-12-10T14:23:31.880000Z",
-            edited: "2014-12-20T21:17:50.309000Z",
-            url: import.meta.env.VITE_SWAPI_BASE_URL + "/films/1/",
-          },
-          // ... more mock film data
-        ],
-      });
+      return HttpResponse.json(film);
     }),
 
-    http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/starships/", (req) => {
+    http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/starships/:id", (req) => {
+      const { id } = req.params;
       // Mock response for the starships endpoint
-      return HttpResponse.json({
-        count: 36,
-        next: import.meta.env.VITE_SWAPI_BASE_URL + "/starships/?page=2",
-        previous: null,
-        results: [
-          {
-            name: "CR90 corvette",
-            model: "CR90 corvette",
-            manufacturer: "Corellian Engineering Corporation",
-            cost_in_credits: "3500000",
-            length: "150",
-            max_atmosphering_speed: "950",
-            crew: "30-165",
-            passengers: "600",
-            cargo_capacity: "3000000",
-            consumables: "1 year",
-            hyperdrive_rating: "2.0",
-            MGLT: "60",
-            starship_class: "corvette",
-            pilots: [],
-            films: [
-              import.meta.env.VITE_SWAPI_BASE_URL + "/films/1/",
-              import.meta.env.VITE_SWAPI_BASE_URL + "/films/3/",
-              import.meta.env.VITE_SWAPI_BASE_URL + "/films/6/",
-            ],
-            created: "2014-12-10T14:20:33.369000Z",
-            edited: "2014-12-20T21:23:49.867000Z",
-            url: import.meta.env.VITE_SWAPI_BASE_URL + "/starships/2/",
-          },
-          // ... more mock starship data
-        ],
-      });
+      return HttpResponse.json(starship);
     }),
     http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/planets/", (req) => {
       // Mock response for the planets endpoint

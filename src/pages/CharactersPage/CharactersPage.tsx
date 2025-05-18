@@ -74,6 +74,7 @@ const CharactersPage = () => {
           onChange={(value) => setSearchQuery(value)}
           value={initialSearchQuery}
           placeholder="Search by characters name"
+          mr={2}
         />
         <IconButton
           aria-label="Refresh character list"
@@ -92,7 +93,7 @@ const CharactersPage = () => {
           refetch,
         }}
       />
-      {totalPagesCount > 1 && (
+      {totalPagesCount > 1 && !isCharactersLoading && (
         <Flex mt={8} justify="flex-end" width="full">
           <Pagination
             count={totalCharactersCount}
@@ -118,7 +119,7 @@ function CharactersGrid({ charactersData }: any) {
 
   if (isCharactersLoading) {
     return (
-      <Flex justify="center" align="center" height="80vh" role="progressbar">
+      <Flex justify="center" align="center" height="60vh" role="progressbar">
         <Spinner size="xl" />
       </Flex>
     );

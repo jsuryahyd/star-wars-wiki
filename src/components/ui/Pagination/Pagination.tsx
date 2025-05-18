@@ -1,7 +1,7 @@
 import { ButtonGroup, IconButton, Pagination } from "@chakra-ui/react"
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu"
 
-type PaginationComponentProps = {count: number,pageSize:number,defaultPage: number, onPageChange:()=>{}}
+type PaginationComponentProps = {count: number,pageSize:number,defaultPage: number, onPageChange:(d: {page:number, pageSize:number})=>void}
 
 export const PaginationComponent = ({count, pageSize, defaultPage, onPageChange, ...otherProps}: PaginationComponentProps) => {
   return (

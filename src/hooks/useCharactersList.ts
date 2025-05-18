@@ -2,11 +2,11 @@ import { useMemo } from "react";
 import {
   fetchCharacterDetails,
   fetchCharacters,
-  fetchPlanet,
   type charactersFilterRespsonse,
   type charactersListResponse,
 } from "@/pages/CharactersPage/CharactersPage.service";
 import { useQueries, useQuery } from "@tanstack/react-query";
+import { fetchPlanet } from "@/services/services";
 interface CharacterWithDetails {
   name: string;
   url: string;

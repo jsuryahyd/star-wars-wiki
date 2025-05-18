@@ -6,11 +6,12 @@ type SearchInputProps = {
 	onChange: (value: string) => void;
 	placeholder?: string;
 	value: string;
+  mr?: number;
 }
 /**
  *
  */
-export default function SearchInput({ onChange, placeholder, value }: SearchInputProps) {
+export default function SearchInput({ onChange, placeholder, value , mr }: SearchInputProps) {
   const [debouncedQuery, setDebouncedQuery] = useDebounceValue(value, 500);
   const inputRef = React.useRef<HTMLInputElement>(null);
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function SearchInput({ onChange, placeholder, value }: SearchInpu
   }, [debouncedQuery]);
 
   return (
-    <Group attached w="full" mr={2}>
+    <Group attached w="full" mr={mr} >
       <Input
         flex="1"
         placeholder={placeholder}
