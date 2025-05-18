@@ -28,6 +28,7 @@ export default function SearchInput({ onChange, placeholder, value }: SearchInpu
         placeholder={placeholder}
         onChange={(e) => setDebouncedQuery(e.target.value)}
         ref={inputRef}
+				type="search"
       />
       {/* <Button bg="bg.subtle" variant="outline">
         <LuSearch />

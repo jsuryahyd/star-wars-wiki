@@ -40,7 +40,11 @@ describe("CharacterCard", () => {
         id="1"
       />
     );
-    testCharacterCard(screen);
+    testCharacterCard(screen, {
+      name: "Jaya Surya",
+      gender: "Male",
+      homeWorld: "Earth",
+    });
   });
 
   it("matches snapshot", () => {
@@ -83,12 +87,12 @@ describe("CharacterCard", () => {
 });
 
 
-export function testCharacterCard(screen:any = screen) {
+export function testCharacterCard(screen:any = screen, character?: any) {
   const article = screen.getByRole("article");
     expect(article).toBeInTheDocument();
     expect(within(article).getByRole("heading", { level: 3 })).toHaveTextContent(
-      "Jaya Surya"
+      new RegExp(character?.name, "i")
     );
-    expect(within(article).getByText("Male")).toBeInTheDocument();
-    expect(within(article).getByText("Earth")).toBeInTheDocument();
+    expect(within(article).getByText(new RegExp(character.gender, "i"))).toBeInTheDocument();
+    expect(within(article).getByText(character.homeWorld)).toBeInTheDocument();
 }

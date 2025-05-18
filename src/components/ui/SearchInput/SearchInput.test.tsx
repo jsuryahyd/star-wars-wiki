@@ -9,7 +9,7 @@ describe("SearchInput", () => {
 
 	it("renders input", () => {
 		render(<SearchInput onChange={() => {}} value="" />);
-		expect(screen.getByRole("textbox")).toBeInTheDocument();
+		expect(screen.getByRole("searchbox")).toBeInTheDocument();
 	});
 
 	it("renders with placeholder", () => {
@@ -21,7 +21,7 @@ describe("SearchInput", () => {
 	it("calls onChange on input change", async () => {
 		const onChange = vi.fn();
 		render(<SearchInput onChange={onChange} value="" />);
-		const input = screen.getByRole("textbox");
+		const input = screen.getByRole("searchbox");
 		await userEvent.type(input, "Luke");
 		await waitFor(()=>{
 			expect(onChange).toHaveBeenCalledWith("Luke");
@@ -30,7 +30,7 @@ describe("SearchInput", () => {
 
 	it("updates input value when prop changes", () => {
 		const { rerender } = render(<SearchInput onChange={() => {}} value="Leia" />);
-		const input = screen.getByRole("textbox") as HTMLInputElement;
+		const input = screen.getByRole("searchbox") as HTMLInputElement;
 		expect(input.value).toBe("Leia");
 		rerender(<SearchInput onChange={() => {}} value="Han" />);
 		expect(input.value).toBe("Han");
@@ -41,7 +41,7 @@ describe("SearchInput", () => {
 		const onChange = vi.fn();
 		const {rerender} = render(<SearchInput onChange={onChange} value="" />);
 
-		const input = screen.getByRole("textbox") as HTMLInputElement;
+		const input = screen.getByRole("searchbox") as HTMLInputElement;
 		await userEvent.type(input, "Leia");
 		rerender(<SearchInput onChange={onChange} value="Leia" />);
 		expect(onChange).not.toHaveBeenCalled();
