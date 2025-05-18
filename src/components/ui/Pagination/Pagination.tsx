@@ -3,9 +3,9 @@ import { LuChevronLeft, LuChevronRight } from "react-icons/lu"
 
 type PaginationComponentProps = {count: number,pageSize:number,defaultPage: number, onPageChange:()=>{}}
 
-export const PaginationComponent = ({count, pageSize, defaultPage, onPageChange}: PaginationComponentProps) => {
+export const PaginationComponent = ({count, pageSize, defaultPage, onPageChange, ...otherProps}: PaginationComponentProps) => {
   return (
-    <Pagination.Root count={count} pageSize={pageSize} defaultPage={defaultPage} onPageChange={onPageChange} role="navigation" aria-label="pagination">
+    <Pagination.Root count={count} pageSize={pageSize} defaultPage={defaultPage} onPageChange={onPageChange} role="navigation" aria-label="pagination" {...otherProps}>
       <ButtonGroup variant="ghost" size="sm">
         <Pagination.PrevTrigger asChild>
           <IconButton>
