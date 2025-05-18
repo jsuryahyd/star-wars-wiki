@@ -42,17 +42,7 @@ export default function useCharactersList({
           };
         }
         return res as charactersListResponse;
-      }),
-    // keepPreviousData: true,
-    select: (data) => ({
-      ...data,
-      total: data?.count || 0, // Extract total count for pagination
-    }),
-    onSuccess: (data: any) => {
-      if (data?.total) {
-        // usePagination.setTotal(data.total);
-      }
-    },
+      })
   });
 
   const characterDetailsQueries = useQueries({
@@ -106,7 +96,7 @@ export default function useCharactersList({
   return {
     isCharactersError,
     isCharactersLoading,
-    charactersWithDetails,
+    charactersWithDetails: charactersWithDetails || [],
     refetch,
     initialError,
     charactersData,
