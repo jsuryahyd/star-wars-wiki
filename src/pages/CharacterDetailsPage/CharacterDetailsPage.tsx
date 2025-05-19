@@ -120,7 +120,7 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
             alt={name}
             onError={(e) => {
               if((e.nativeEvent?.target as HTMLImageElement)?.src)
-                e.nativeEvent.target.src = "/assets/images/avatar-default.svg";
+                e.nativeEvent.target.src = import.meta.env.BASE_URL+ "assets/images/avatar-default.svg";
             }}
             style={{ backgroundColor: "white", margin: "auto" }}
           />

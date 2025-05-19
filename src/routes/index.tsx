@@ -19,6 +19,7 @@ export const rootRoute = createRootRoute({
 			</Layout>
     </>
   ),
+
 })
 export const HomeRoute = createRoute({
 	getParentRoute: ()=>rootRoute,

@@ -15,10 +15,10 @@ export default function Layout({ children }: LayoutProps) {
       <Box as="header"  py={4} px={6} boxShadow="sm">
         <Flex align="center" maxW="6xl" mx="auto">
           <Spacer display={{ base: "none", md: "flex" }}/>
-						<Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+						<Link to={import.meta.env.BASE_URL} style={{ textDecoration: "none", color: "inherit" }}>
 							<Heading
 								as="h1"
-								size="lg"
+								size="2xl"
 								textAlign="center"
 								flex="1"
 							>
@@ -28,7 +28,7 @@ export default function Layout({ children }: LayoutProps) {
           <Spacer />
           <IconButton
             as={Link}
-            to="/favourites"
+            to={import.meta.env.BASE_URL +"favourites"}
             aria-label="Favourites"
             variant="ghost"
             colorScheme="yellow"

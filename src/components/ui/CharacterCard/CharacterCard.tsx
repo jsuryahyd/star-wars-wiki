@@ -39,7 +39,7 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
       transition="transform 0.15s ease-in-out"
       _hover={{ transform: "scale(1.02)" }}
     >
-      <LinkOverlay as={RouterLink} to={`/character-details/${id}`}>
+      <LinkOverlay as={RouterLink} to={`${import.meta.env.BASE_URL}character-details/${id}`}>
         <Card.Root>
           <a href="javascript:void(0);/*to prevent propagation to outer link*/" style={{position: 'absolute', top: '0.5rem', right: '0.5rem'}}>{renderTopRight?.(id)}</a>
           <Flex align="center" gap={4} p={4}>

@@ -1,7 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
 
 import { Provider as ChakraProvider } from "@/components/ui/provider"
 import { createRouter, RouterProvider } from '@tanstack/react-router'
@@ -12,7 +8,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 
 
-const router = createRouter({routeTree})
+const router = createRouter({routeTree, basepath: import.meta.env.PROD ? "/star-wars-wiki/" : "/"})
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

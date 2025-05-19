@@ -16,7 +16,7 @@ export default function useFavouritesList() {
 
 	return {
 		isCharactersLoading: isLoading,
-		charactersWithDetails: isError ? [] : (data ?? []).map(c=>({...c, avatarUrl: '/assets/images/'+c.uid+".png"})),
+		charactersWithDetails: isError ? [] : (data ?? []).map(c=>({...c, avatarUrl: import.meta.env.BASE_URL+'assets/images/'+c.uid+".png"})),
 		isCharactersError: isError,
 		refetch,
 	};

@@ -53,7 +53,7 @@ export default function useCharacterDetails(id: string) {
   // Merge films and starships data into characterDetails
 
   if (characterDetails) {
-    characterDetails.avatarUrl = `/assets/images/${id}.png`;
+    characterDetails.avatarUrl = `${import.meta.env.BASE_URL}assets/images/${id}.png`;
     characterDetails.featuredFilms = filmQueries
       .map((q) => q.data?.result?.properties?.title)
       .filter(Boolean);

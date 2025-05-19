@@ -84,7 +84,7 @@ export default function useCharactersList({
           "Unknown",
         homeworldName:
           homeworldQueries[index]?.data?.result?.properties?.name || "Unknown",
-					imageUrl:'/assets/images/'+character.uid+'.png'
+					imageUrl:import.meta.env.BASE_URL + 'assets/images/'+character.uid+'.png'
       };
     });
   }, [charactersData?.results, characterDetailsQueries, homeworldQueries]);
