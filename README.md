@@ -1,4 +1,4 @@
-# [Star Wars Wiki](https://jsuryahyd.github.io/star-wars-wiki) ([Deployed](https://jsuryahyd.github.io/star-wars-wiki))
+# [Star Wars Wiki](https://jsuryahyd.github.io/star-wars-wiki) [(Deployed)](https://jsuryahyd.github.io/star-wars-wiki)
 
 ### Requirements: [✔️]
 
@@ -84,6 +84,6 @@
 - Find workaround for flaky snapshot tests.
 - Fix CI/CD pipeline
 - Generate Coverage Report (also as part of ci/cd pipeline)
-- Add Toast messages when a put/post api call is succeeded.
+- Show toast messages when a put/post api call is succeeded.
 - Implement "Undo" on put/post api calls.
 - Better profile card design in home page.
