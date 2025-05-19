@@ -10,6 +10,8 @@ export default defineConfig(({ mode }) => ({
     globals: { vi: true },
     setupFiles: ["fake-indexeddb/auto", './src/test-utils/setupTests.ts'],
     coverage: {
+      enabled: true,
+      provider: 'v8',
       reporter: ['text', 'json', 'html'],
     },
   },

@@ -211,9 +211,9 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
           </Heading>
           {featuredFilms && featuredFilms.length > 0 ? (
             <Wrap spacing={2}>
-              {featuredFilms.map((movie, index) => (
+              {featuredFilms.map((movie) => (
                 <Tag.Root
-                  key={index}
+                  key={movie}
                   colorScheme="blue"
                   size="lg"
                   role="listitem"

@@ -6,7 +6,7 @@ import film from "./mock-data/film.json";
 import starship from "./mock-data/starship.json";
 import mockUserData from "./mock-data/user.json";
 import {type favourite, getAllFavourites, addFavourite, removeFavourite, getFavouriteById} from "./db"
-console.log(import.meta.env)
+// console.log(import.meta.env)
 
 
 

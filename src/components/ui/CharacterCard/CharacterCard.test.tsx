@@ -1,7 +1,7 @@
 import { render, screen, waitFor, within } from "@/test-utils/render";
 import { CharacterCard } from "./CharacterCard";
 import userEvent from "@testing-library/user-event";
-import {Avatar} from "@chakra-ui/react" 
+
 vi.mock(
   "@tanstack/react-router",
   async (importOriginal: () => Promise<any>) => {
@@ -87,7 +87,7 @@ describe("CharacterCard", () => {
 });
 
 
-export function testCharacterCard(screen:any = screen, character?: any) {
+export function testCharacterCard(screen:any, character?: any) {
   const article = screen.getByRole("article");
     expect(article).toBeInTheDocument();
     expect(within(article).getByRole("heading", { level: 3 })).toHaveTextContent(
