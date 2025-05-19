@@ -18,6 +18,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeFavourite } from "@/services/services";
 import SearchInput from "@/components/ui/SearchInput/SearchInput";
 import { useState } from "react";
+import { characters } from "../../../mocks/handlers";
 
 export default function FavouritesPage() {
 
@@ -71,18 +72,6 @@ export default function FavouritesPage() {
           mutate(id);
         }}
       />
-      {/* {totalPagesCount > 1 && (
-				<Flex mt={8} justify="flex-end" width="full">
-					<Pagination
-						count={totalCharactersCount}
-						pageSize={itemsPerPage}
-						defaultPage={page}
-						onPageChange={({ page, pageSize }) => {
-							setPage(page);
-						}}
-					/>
-				</Flex>
-			)} */}
     </Flex>
   );
 }
@@ -150,7 +139,7 @@ function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
             name={character.name}
 						avatarUrl={character.avatarUrl}
             details={[
-              { label: "Gender", value: capitalize(character.gender) },
+              { label: "Gender", value: capitalize(character.gender === "n/a" ? "N/A" : character.gender) },
               { label: "Home Planet", value: character.homeWorld },
               { label: "Height", value: character.height + " cm" },
             ]}

@@ -86,3 +86,4 @@
 - Generate Coverage Report (also as part of ci/cd pipeline)
 - Add Toast messages when a put/post api call is succeeded.
 - Implement "Undo" on put/post api calls.
+- Better profile card design in home page.

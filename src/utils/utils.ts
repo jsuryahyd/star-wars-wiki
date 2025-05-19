@@ -7,12 +7,13 @@ export function capitalize(str: string): string {
  * @param arr 
  * @description takes an array of strings and returns a sub array of random items from the array
  */
-export function randomItemsFrom(arr: string[]){
-	const randomItems = [];
-	const randomCount = Math.floor(Math.random() * arr.length) + 1;
-	for (let i = 0; i < randomCount; i++) {
-		const randomIndex = Math.floor(Math.random() * arr.length);
-		randomItems.push(arr[randomIndex]);
+export function randomItemsFrom(arr: string[]) {
+	const arrCopy = [...arr];
+	// Fisher-Yates shuffle
+	for (let i = arrCopy.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[arrCopy[i], arrCopy[j]] = [arrCopy[j], arrCopy[i]];
 	}
-	return randomItems;
+	const randomCount = Math.floor(Math.random() * arrCopy.length) + 1;
+	return arrCopy.slice(0, randomCount);
 }
