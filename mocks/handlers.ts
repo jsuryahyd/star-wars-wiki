@@ -11,16 +11,16 @@ import {type favourite, getAllFavourites, addFavourite, removeFavourite, getFavo
 
 
 // Initialize favourites from IndexedDB
-export let favourites: favourite[] = [];
-getAllFavourites().then((favs) => {
-  favourites = favs.length
-    ? favs
-    : defaultFavourites;
-  // Persist initial data if IndexedDB was empty
-  if (!favs.length) {
-    favourites.forEach(addFavourite);
-  }
-});
+// export let favourites: favourite[] = [];
+// getAllFavourites().then((favs) => {
+//   favourites = favs.length
+//     ? favs
+//     : defaultFavourites;
+//   // Persist initial data if IndexedDB was empty
+//   if (!favs.length) {
+//     favourites.forEach(addFavourite);
+//   }
+// });
 
 const isTestingEnv = import.meta.env.MODE === "test";
 
@@ -53,6 +53,7 @@ export let handlers = [
   http.get("/api/favourites/is-favourite/:id", async (req) => {
     const { id } = req.params;
     const fav = await getFavouriteById(id as string);
+    // console.log("is-favourite",id, fav);
     return HttpResponse.json(fav ? 1 : 0);
   })
 ];
@@ -63,6 +64,7 @@ if (isTestingEnv) {
       const { id } = req.params;
       //gen random planet id from 1 to 60
       const planetId = Math.floor(Math.random() * 60) + 1;
+      console.log('sending 2 starships with json mock data');
       // Mock response for the character details endpoint
       return HttpResponse.json(mockUserData);
     }),
