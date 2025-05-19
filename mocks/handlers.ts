@@ -27,7 +27,7 @@ const isTestingEnv = import.meta.env.MODE === "test";
 export let characters = defaultCharacters;
 
 export let handlers = [
-  http.post("/api/favourites", async (req) => {
+  http.post(import.meta.env.BASE_URL+"api/favourites", async (req) => {
     const newFavourite = (await req.request.json()) as favourite;
     if (!newFavourite) return HttpResponse.json({ error: "Invalid request" });
     
@@ -46,8 +46,9 @@ export let handlers = [
   }),
 
   // Handler for getting all favorite characters
-  http.get("/api/favourites", async (req) => {
-    return HttpResponse.json(await getAllFavourites());
+  http.get(import.meta.env.BASE_URL+"api/favourites", async (req) => {
+    console.log("default handler");
+    return HttpResponse.json(await getAllFavourites()); //todo: this will cause issues in tests, as concurrent tests will try to access the same DB
   }),
 
   http.get("/api/favourites/is-favourite/:id", async (req) => {

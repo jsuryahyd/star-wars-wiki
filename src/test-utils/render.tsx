@@ -10,18 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { Provider } from "@/components/ui/provider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 60 * 5, // 5 minutes
-      gcTime: 1000 * 60 * 10, // 10 minutes
-    },
-    mutations: {
-      retry: false,
-    },
-  },
-});
+import { Toaster } from "@/components/ui/toaster";
 
 const customRender = (
   ui: React.ReactElement,
@@ -34,7 +23,6 @@ const customRender = (
     routes?: { path: string; component: any }[];
   } & Omit<Parameters<typeof rtlRender>[1], "wrapper"> = {}
 ) => {
-
   const rootRoute = createRootRoute({
     component: Outlet,
   });
@@ -66,6 +54,18 @@ const customRender = (
   //     to: "/",
   //   });
   // });
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 1000 * 60 * 5, // 5 minutes
+        gcTime: 1000 * 60 * 10, // 10 minutes
+      },
+      mutations: {
+        retry: false,
+      },
+    },
+  });
+
   const Wrapper = ({ children }: { children: React.ReactNode }) => (
     <Provider>
       <QueryClientProvider client={queryClient}>
@@ -77,6 +77,7 @@ const customRender = (
         ) : (
           children
         )}
+        <Toaster />
       </QueryClientProvider>
     </Provider>
   );

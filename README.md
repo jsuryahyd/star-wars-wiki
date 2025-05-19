@@ -88,3 +88,5 @@
 - Add Toast messages when a put/post api call is succeeded. (adding/removing favourites)
 - Implement "Undo" on put/post api calls. (within the toast, or within the card UI)
 - Replace Swapi.dev with Swapi.info for cleaner api structure
+- Important: add error response handling in the code, and test cases.
+ 

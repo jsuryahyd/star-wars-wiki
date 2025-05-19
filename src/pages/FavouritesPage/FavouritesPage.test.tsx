@@ -12,13 +12,22 @@ import { server } from "../../../mocks/server";
 import { http, HttpResponse } from "msw";
 import userEvent from "@testing-library/user-event";
 
+const newRouteContent = "New Route Content";
 const routes: any[] = [
-  { path: "/favourites/:id", component: () => <div>Favourite page 1</div> },
+  { path: "/character-details/:id", component: () => <div>{newRouteContent}</div> },
 ];
 describe("FavouritesPage", () => {
   afterEach(() => {
     server.resetHandlers();
+    // clearFavourites();
   });
+
+  beforeEach(async ()=>{
+    //wrong to do so, since all tests are run in parallel, accessing same DB. Instead use Server.use() to mock the response
+    //  for(let f of favourites){
+    //   await addFavourite(f)
+    // }
+  })
 
   test("renders as expected", async () => {
     const { router } = render(<FavouritesPage />, { routes });
@@ -41,9 +50,7 @@ describe("FavouritesPage", () => {
     });
   });
 
-  test.skip("shows error message and retry button on error", async () => {
-    // Simulate error state using MSW
-    // Remove all existing handlers so this one takes precedence
+  test.skip("shows error message and retry button on load error", async () => {
     server.use(
       http.get("/api/favourites", () => {
         return HttpResponse.json(
@@ -78,24 +85,77 @@ describe("FavouritesPage", () => {
     expect(await screen.findByText(/No Favourites Yet/i)).toBeInTheDocument();
   });
 
-  _test("calls removeFavourite when remove button is clicked", async () => {
+  test("navigates to character details page when a card is clicked", async () => {
+    
+    server.use(
+      http.get(import.meta.env.BASE_URL + "api/favourites", () => {
+    console.log("server.use handler")
+        return HttpResponse.json(
+         [...favourites]
+        );
+      })
+    );
     const { router } = render(<FavouritesPage />, { routes });
     await act(() => router.navigate({ to: "/" }));
     await waitFor(() => {
       expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
     });
+    
     const articles = screen.getAllByRole("article");
     expect(articles.length).toBe(favourites.length);
-    const removeButton = within(articles[0]).getByRole("button", {
-      name: /remove/i,
-    });
-    expect(removeButton).toBeInTheDocument();
-    await userEvent.click(removeButton);
+   
+    expect(articles[0]).toBeInTheDocument();
+    await userEvent.click(articles[0].children[0]);
+    screen.debug(articles[0].children[0])
+await waitFor(()=>{
+  console.log(router.latestLocation.pathname, "latestLocation");
+  expect(screen.getByText(newRouteContent)).toBeInTheDocument();
+  // expect(router.latestLocation.pathname).toBe(`/character-details/${favourites[0].uid}`);
+})
+  })
 
-    // Optionally, assert that the character is removed from the list
+  test("can remove favourite card and show success toast", async () => {
+    let favs = [...favourites]
+    server.use(
+      http.get(import.meta.env.BASE_URL + "api/favourites", () => {
+        return HttpResponse.json(
+         favs
+        );
+      }),
+      http.delete(import.meta.env.BASE_URL + "api/favourites/:id", (req) => {
+        const { id } = req.params;
+        favs = favs.filter((f) => f.uid !== id);
+        return HttpResponse.json({ message: "Character removed from favourites" });
+      })
+    );
+    
+    const { router } = render(<FavouritesPage />, { routes });
+    await act(() => router.navigate({ to: "/" }));
     await waitFor(() => {
-      expect(screen.queryByText(/luke skywalker/i)).not.toBeInTheDocument();
-      expect(screen.getAllByRole("article").length).toBe(favourites.length - 1);
+      expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
     });
-  });
+    
+    const articles = screen.getAllByRole("article");
+    // screen.debug()
+    // console.log(articles.length, favourites.length)
+    expect(articles.length).toBe(favourites.length);
+    const firstCard = articles[0]
+    const removeCard = within(firstCard).getByRole("button", {
+      name: /remove from favourites/i,
+    });
+    await userEvent.click(removeCard);
+    await waitFor(() => {
+      const alert = screen.getByRole('status')
+      expect(alert).toBeInTheDocument();
+      expect(alert).toHaveTextContent(/removed from favourites/i);
+
+      //takes time for react query to refetch
+      expect(screen.getAllByRole("article").length).toBe(favourites.length - 1);
+    })
+  })
+
+  test("undo remove favourite, brings back removed card", async () => {
+
+  })
+
 });
