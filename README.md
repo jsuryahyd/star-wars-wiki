@@ -1,14 +1,14 @@
 # [Star Wars Wiki](https://jsuryahyd.github.io/star-wars-wiki) ([Deployed](https://jsuryahyd.github.io/star-wars-wiki))
 
-### Requirements:
+### Requirements: [✔️]
 
-- A wiki website with 3 Pages - Characters List Page,  Character Details Page, Favourites Page (Minimum Requirement)[✔️]
-- Scalable architecture. Clean, Readable and testable code. Attention to Details.(Minimum Requirement)[✔️]
-- React, Typescript and TDD (Minimum Requirement) [✔️]
-- All pages should be Accessible. [✔️]
-- Support light and dark themes. [✔️]
-- CI/CD Setup [✔️]
-- Deploy for Demo [✔️]
+- A wiki website with 3 Pages - Characters List Page,  Character Details Page, Favourites Page (Minimum Requirement)
+- Scalable architecture. Clean, Readable and testable code. Attention to Details.(Minimum Requirement)
+- React, Typescript and TDD (Minimum Requirement) 
+- All pages should be Accessible. 
+- Support light and dark themes. 
+- CI/CD Setup 
+- Deploy for Demo
 
 ### Architectural Choices
 
@@ -19,28 +19,28 @@
 - Code splitting and Lazy loading (while not necessary in this case) can be implemented as bundle sizes grow, for faster page load times. [✖️]
 - Deploy to Github Pages using Github Actions [✔️]
 
-### Technology choices:
+### Technology choices: [✔️]
 
-- Node v20 is required for some of the dependancies(Chakra UI v3). It is a stable version.[✔️]
-- React with Typescript for a SPA (setup with **vite** build tool)[✔️]
-- Tanstack router for browser routing[✔️]
+- Node v20 is required for some of the dependancies(Chakra UI v3). It is a stable version.
+- React with Typescript for a SPA (setup with **vite** build tool)
+- Tanstack router for browser routing
 	- Considered a better alternative for React-router, I wanted to try it out.
-- Chakra UI for components and styling. [✔️]
+- Chakra UI for components and styling. 
 	- **Reason:** Part of the Allica Bank's tech stack. Ready to use components like Card, Grid etc would help in faster development time compared to Ark UI
 		- Out of the box support for responsive web design
 		- Reusable components are built as wrappers over Chakra UI components. But layout related components are directly used for now. 
-- Tanstack Query for data fetching and caching [✔️]
+- Tanstack Query for data fetching and caching 
 	- Caching becomes much more critical in the application, as swapi.dev apis required calling of lot of subsequent apis, and server response times are slow.
-- Context API for global state management [✔️]
+- Context API for global state management 
 	- Not much of state to manage in the frontend. So, Dedicated state management solutions are not required. React Query takes care of caching api responses.
-- MSW, IndexedDB for caching favourites list [✔️]
+- MSW, IndexedDB for caching favourites list 
 	- MSW in browser can intercept crud operations on `/favourites` resource. Data can be persisted to indexedDB, as service workers do not have acccess to localstorage.
-- Vitest and testing library for component and integration tests [✔️]
+- Vitest and testing library for component and integration tests 
 	- vitest is faster than jest and integrates well with vitest.
 	- testing-library is the better choice, for its DX and user-simulating API
 
 ### Others
-- Tools like DataDog, Sentry can be used for monitoring and observability. (Not used currently)
+- Tools like Sentry can be used for monitoring and observability.[✖️]
 - Security
 	- Proper CSP policies must be enforced.[✔️]
 	- TLS must be used while deploying.[✔️]
