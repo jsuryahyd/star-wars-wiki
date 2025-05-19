@@ -4,6 +4,7 @@ import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { routeTree } from './routes'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { Toaster } from "./components/ui/toaster"
 
 
 
@@ -28,6 +29,7 @@ function App() {
     <ChakraProvider>
       <RouterProvider router={router} />
     <ReactQueryDevtools initialIsOpen={true} />
+    <Toaster />
     </ChakraProvider>
     </QueryClientProvider>
   )

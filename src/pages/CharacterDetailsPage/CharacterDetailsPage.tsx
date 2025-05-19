@@ -16,6 +16,8 @@ import {
   Tag,
   Wrap,
   Spinner,
+  Editable,
+  IconButton,
 } from "@chakra-ui/react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import useCharacterDetails from "@/hooks/useCharacterDetails";
@@ -24,7 +26,8 @@ import { capitalize } from "@/utils/utils";
 import { getIsFavourite } from "./CharacterDetailsPage.service";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { addFavourite, removeFavourite } from "@/services/services";
-
+import { LuCheck, LuPencilLine, LuX } from "react-icons/lu";
+import { toaster } from "@/components/ui/toaster";
 interface CharacterDetailsProps {
   name: string;
   profilePictureUrl?: string;
@@ -45,8 +48,8 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
     queryFn: () => getIsFavourite(id),
     enabled: !!id,
   });
-  const queryClient = useQueryClient()
-  const { mutate, isPending:isFavUpdating } = useMutation({
+  const queryClient = useQueryClient();
+  const { mutate, isPending: isFavUpdating } = useMutation({
     mutationFn: async ({ id, addFav }: { id: string; addFav: boolean }) => {
       return addFav
         ? addFavourite({
@@ -119,8 +122,9 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
             fit="cover"
             alt={name}
             onError={(e) => {
-              if((e.nativeEvent?.target as HTMLImageElement)?.src)
-                e.nativeEvent.target.src = import.meta.env.BASE_URL+ "assets/images/avatar-default.svg";
+              if ((e.nativeEvent?.target as HTMLImageElement)?.src)
+                e.nativeEvent.target.src =
+                  import.meta.env.BASE_URL + "assets/images/avatar-default.svg";
             }}
             style={{ backgroundColor: "white", margin: "auto" }}
           />
@@ -134,7 +138,6 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
           )}
           {isFavourite ? (
             <Button
-              
               size="md"
               mt={4}
               onClick={() => mutate({ id, addFav: false })}
@@ -177,7 +180,7 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
               }}
               gap={4}
             >
-              {details.map((detail) => {
+              {details.map((detail, idx) => {
                 const testid = detail.label.replace(/\s+/g, "-").toLowerCase();
                 return (
                   <React.Fragment key={detail.label}>
@@ -185,9 +188,15 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
                       <Text fontWeight="bold" fontSize="xs" opacity={0.6}>
                         {detail.label}
                       </Text>
-                      <Text fontSize="md">
-                        {capitalize(detail.value) || "Unknown"}
-                      </Text>
+                      {testid === "hair-colour" || testid === "weight" ? (
+                        <EditableText
+                          value={capitalize(detail.value) || "Unknown"}
+                        />
+                      ) : (
+                        <Text fontSize="md">
+                          {capitalize(detail.value) || "Unknown"}
+                        </Text>
+                      )}
                     </GridItem>
                   </React.Fragment>
                 );
@@ -261,3 +270,44 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
 };
 
 export default CharacterDetails;
+
+function EditableText({ value }) {
+  return (
+    <Editable.Root
+      defaultValue="Click to edit"
+      onValueChange={(e) => {
+        // console.log(e.value);
+      }}
+      submitMode="enter"
+      placeholder="Click to edit"
+      value={value}
+      onValueCommit={(e) => {
+        // alert("Not Implemented")
+        toaster.create({
+          title: "Coming Soon",
+          description: "This feature will be available soon.",
+        });
+      }}
+    >
+      <Editable.Preview />
+      <Editable.Input />
+      <Editable.Control>
+        <Editable.EditTrigger asChild>
+          <IconButton variant="ghost" size="xs">
+            <LuPencilLine />
+          </IconButton>
+        </Editable.EditTrigger>
+        <Editable.CancelTrigger asChild>
+          <IconButton variant="outline" size="xs">
+            <LuX />
+          </IconButton>
+        </Editable.CancelTrigger>
+        <Editable.SubmitTrigger asChild>
+          <IconButton variant="outline" size="xs">
+            <LuCheck />
+          </IconButton>
+        </Editable.SubmitTrigger>
+      </Editable.Control>
+    </Editable.Root>
+  );
+}
