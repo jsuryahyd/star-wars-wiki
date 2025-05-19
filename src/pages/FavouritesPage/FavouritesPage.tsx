@@ -14,7 +14,7 @@ import { capitalize } from "@/utils/utils";
 import { CharacterCard } from "@/components/ui/CharacterCard/CharacterCard";
 import useFavouritesList from "@/hooks/useFavouritesList";
 import { LuCross, LuDelete, LuListX, LuTrash, LuX } from "react-icons/lu";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeFavourite } from "@/services/services";
 import SearchInput from "@/components/ui/SearchInput/SearchInput";
 import { useState } from "react";
@@ -22,7 +22,7 @@ import { useState } from "react";
 export default function FavouritesPage() {
 
 	const [searchQuery, setSearchQuery] = useState("");
-
+  const queryClient = useQueryClient();
   const {
     isCharactersLoading,
     charactersWithDetails,
@@ -33,8 +33,9 @@ export default function FavouritesPage() {
     mutationFn: async (id: string) => {
       return removeFavourite(id);
     },
-    onSuccess: () => {
+    onSuccess: (data, id) => {
       refetch();
+      queryClient.invalidateQueries(["isFavourite",id]);
     },
     onError: () => {
       console.log("Error removing favourite");
@@ -151,7 +152,7 @@ function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
             details={[
               { label: "Gender", value: capitalize(character.gender) },
               { label: "Home Planet", value: character.homeWorld },
-              { label: "Height", value: character.height },
+              { label: "Height", value: character.height + " cm" },
             ]}
             id={character.uid}
             renderTopRight={(id) => {

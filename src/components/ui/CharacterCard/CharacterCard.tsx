@@ -10,6 +10,7 @@ import {
   IconButton,
   Flex,
   Card,
+  Spacer,
 } from "@chakra-ui/react";
 
 import { Link as RouterLink } from "@tanstack/react-router";
@@ -47,15 +48,20 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
               <Avatar.Fallback />
               <Avatar.Image src={avatarUrl} />
             </Avatar.Root>
-            <Stack spacing={1}>
+            <Stack spacing={1} width={"full"}>
               <Heading as="h3" fontSize="lg" fontWeight="semibold" mb={0}>
                 {name}
               </Heading>
               {details.map((detail) => (
-                <Text key={detail.label} fontSize="sm" color="gray.600">
+                <Flex key={detail.label} justify="space-between" align="center">
+                  <Text fontSize="xs" opacity={0.6} fontWeight="bold">
+                  {detail.label}: 
+                </Text>
+                <Text fontSize="sm" >
                   {/* {detail.label}:  */}
                   {detail.value || "Unknown"}
                 </Text>
+                </Flex>
               ))}
             </Stack>
           </Flex>

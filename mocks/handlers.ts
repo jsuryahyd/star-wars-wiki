@@ -52,8 +52,7 @@ export let handlers = [
 
   http.get("/api/favourites/is-favourite/:id", async (req) => {
     const { id } = req.params;
-    const fav = await getFavouriteById(id as string)
-    console.log("is-favourite", fav);
+    const fav = await getFavouriteById(id as string);
     return HttpResponse.json(fav ? 1 : 0);
   })
 ];
