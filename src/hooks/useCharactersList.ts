@@ -46,6 +46,7 @@ export default function useCharactersList({
       })
   });
 
+  //todo: instead extract unique urls, maintain in a Map() and merge the data
   const characterDetailsQueries = useQueries({
     queries:
       charactersData?.results?.map((character) => ({
@@ -55,6 +56,7 @@ export default function useCharactersList({
       })) ?? [],
   });
 
+  //todo: instead extract unique urls, maintain in a Map() and merge the data
   const homeworldQueries = useQueries({
     queries:
       characterDetailsQueries.map((res) => {

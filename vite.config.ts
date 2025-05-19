@@ -10,9 +10,18 @@ export default defineConfig(({ mode }) => ({
     globals: { vi: true },
     setupFiles: ["fake-indexeddb/auto", './src/test-utils/setupTests.ts'],
     coverage: {
-      enabled: true,
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
     },
+    include: ['src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+    exclude: [
+      'node_modules',
+      'dist',
+      'coverage',
+      'public',
+      '**/test-utils/**',
+      '**/__mocks__/**',
+      '**/*.d.ts'
+    ],
   },
 }));

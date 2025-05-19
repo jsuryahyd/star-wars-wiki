@@ -6,6 +6,7 @@ import {
 import { fetchPlanet } from "@/services/services";
 import { randomItemsFrom } from "@/utils/utils";
 import { useQuery, useQueries } from "@tanstack/react-query";
+import { useMemo } from "react";
 
 export default function useCharacterDetails(id: string) {
   const { data, error, isLoading } = useQuery({
@@ -22,7 +23,7 @@ export default function useCharacterDetails(id: string) {
   // Fetch films and starships if characterDetails is available
   const filmUrls = characterDetails?.films || [];
   const starshipUrls = characterDetails?.starships || [];
-			
+
   const filmQueries = useQueries({
     queries: filmUrls.map((url: string) => ({
       queryKey: ["film", url],
@@ -50,6 +51,36 @@ export default function useCharacterDetails(id: string) {
     enabled: !!characterDetails?.homeworld,
   });
 
+	const randomMovies = useMemo(()=>{
+		return randomItemsFrom([
+          "A New Hope",
+          "The Empire Strikes Back",
+          "Return of the Jedi",
+          "The Phantom Menace",
+          "Attack of the Clones",
+          "Revenge of the Sith",
+          "The Clone Wars",
+          "The Force Awakens",
+          "The Last Jedi",
+          "The Rise of Skywalker",
+        ])
+	}, [])
+
+	const randomStarships = useMemo(()=>{
+		return randomItemsFrom([
+          "X-Wing",
+          "TIE Fighter",
+          "Millennium Falcon",
+          "Star Destroyer",
+          "Slave I",
+          "Imperial Shuttle",
+          "A-Wing",
+          "B-Wing",
+          "Y-Wing",
+          "Naboo Starfighter",
+        ])
+	},[])
+
   // Merge films and starships data into characterDetails
 
   if (characterDetails) {
@@ -62,35 +93,15 @@ export default function useCharacterDetails(id: string) {
       .filter(Boolean);
 
     //static data since swapi does not return films and starships anymore
-    characterDetails.featuredFilms = characterDetails.featuredFilms 
-		// || randomItemsFrom([
-    //   "A New Hope",
-    //   "The Empire Strikes Back",
-    //   "Return of the Jedi",
-    //   "The Phantom Menace",
-    //   "Attack of the Clones",
-    //   "Revenge of the Sith",
-    //   "The Clone Wars",
-    //   "The Force Awakens",
-    //   "The Last Jedi",
-    //   "The Rise of Skywalker",
-    // ]);
-    characterDetails.starshipsPiloted = characterDetails.starshipsPiloted 
-		// || randomItemsFrom([
-    //   "X-Wing",
-    //   "TIE Fighter",
-    //   "Millennium Falcon",
-    //   "Star Destroyer",
-    //   "Slave I",
-    //   "Imperial Shuttle",
-    //   "A-Wing",
-    //   "B-Wing",
-    //   "Y-Wing",
-    //   "Naboo Starfighter",
-    // ]);
-		
-		characterDetails.homeworldName =
-			homeWorldQuery.data?.result?.properties?.name || "Unknown";
+    characterDetails.featuredFilms = characterDetails.featuredFilms.length
+      ? characterDetails.featuredFilms
+      : randomMovies;
+    characterDetails.starshipsPiloted = characterDetails.starshipsPiloted.length
+      ? characterDetails.starshipsPiloted
+      : randomStarships;
+
+    characterDetails.homeworldName =
+      homeWorldQuery.data?.result?.properties?.name || "Unknown";
     characterDetails.details = [
       {
         label: "Home World",

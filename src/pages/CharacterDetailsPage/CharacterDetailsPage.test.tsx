@@ -5,6 +5,9 @@ import film from "../../../mocks/mock-data/film.json";
 import starship from "../../../mocks/mock-data/starship.json";
 import { server } from "../../../mocks/server";
 import { http, HttpResponse } from "msw";
+import { addFavourite, getAllFavourites, removeFavourite } from "../../../mocks/db";
+import defaultFavourites from "../../../mocks/mock-data/favourites.json";
+import userEvent from "@testing-library/user-event";
 describe("CharacterDetailsPage", () => {
   const routes = [
     {
@@ -16,8 +19,11 @@ describe("CharacterDetailsPage", () => {
       component: () => <div>Home</div>,
     },
   ];
-  afterEach(() => {
-    server.resetHandlers();
+
+	
+  afterEach(async () => {
+    // server.resetHandlers();//already added in setupTests.ts
+		//maintain the default favourites in indexedDB (ids-1,2)
   });
   test("renders as expected", async () => {
     const { router } = render(<CharacterDetailsPage />, { routes });
@@ -140,6 +146,7 @@ describe("CharacterDetailsPage", () => {
   });
 
   test("shows empty msg up on no movies", async () => {
+		//todo: does not override the default handler, when run in group
     server.use(
       http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people/:id", (req) => {
         const { id } = req.params;
@@ -209,8 +216,10 @@ describe("CharacterDetailsPage", () => {
   });
 
   test("shows empty message when no starships", async () => {
+		//todo: does not override the default handler
     server.use(
       http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people/:id", (req) => {
+				console.log('sending empty starships');
         const { id } = req.params;
         // Mock response for the character details endpoint
         return HttpResponse.json({
@@ -243,7 +252,8 @@ describe("CharacterDetailsPage", () => {
     expect(noStarshipsMessage).toBeInTheDocument();
   });
 
-  test.only("Favourite and unFavourite actions work as expected", async () => {
+  test("Favourite and unFavourite actions work as expected", async () => {
+		console.log('favourites after removing 1', await getAllFavourites());
     const { router } = render(<CharacterDetailsPage />, { routes });
     await act(() => {
       router.navigate({
@@ -257,19 +267,29 @@ describe("CharacterDetailsPage", () => {
       name: /add to favourites/i,
     });
     expect(favouriteButton).toBeInTheDocument();
-    expect(favouriteButton).toHaveAttribute("aria-pressed", "false");
-    expect(favouriteButton).toHaveTextContent(/add to favourites/i);
+		expect(screen.queryByRole("button", { name: /my favourite/i })).not.toBeInTheDocument();
+    
+		await userEvent.click(favouriteButton);
 
-    favouriteButton.click();
-    expect(favouriteButton).toHaveAttribute("aria-pressed", "true");
-    expect(favouriteButton).toHaveTextContent(/remove from favourites/i);
+    await waitFor(() => {
+      expect(
+        screen.queryByRole("button", { name: /add to favourites/i })
+      ).not.toBeInTheDocument();
+    });
+    const removeFavouriteButton = screen.getByRole("button", {
+      name: /my favourite/i,
+    });
 
-    favouriteButton.click();
-    expect(favouriteButton).toHaveAttribute("aria-pressed", "false");
-    expect(favouriteButton).toHaveTextContent(/add to favourites/i);
+    await userEvent.click(removeFavouriteButton);
+    await waitFor(() => {
+      expect(
+        screen.queryByRole("button", { name: /my favourite/i })
+      ).not.toBeInTheDocument();
+    });
+    expect(
+      screen.getByRole("button", { name: /add to favourites/i })
+    ).toBeInTheDocument();
   });
-
-  test("shows appropriate message when no data is available", () => {});
 
   test("shows appropriate message when error responses are received", () => {});
 });

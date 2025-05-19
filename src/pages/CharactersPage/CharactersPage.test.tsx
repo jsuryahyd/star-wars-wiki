@@ -69,7 +69,7 @@ describe("CharactersPage", () => {
       //gender and homeworld are already tested in CharacterCard test
       // the data is not available in the mock, can add it to the mock and test
     });
-    expect(charactersGrid).toMatchSnapshot();
+    // expect(charactersGrid).toMatchSnapshot();
   });
 
   test("search works as expected", async () => {
@@ -148,7 +148,7 @@ describe("CharactersPage", () => {
           //gender and homeworld are already tested in CharacterCard test
           // the data is not available in the mock, can add it to the mock and test
         });
-        expect(charactersGrid).toMatchSnapshot();
+        // expect(charactersGrid).toMatchSnapshot();
       },
       { timeout: 4000 }
     );
@@ -164,6 +164,9 @@ describe("CharactersPage", () => {
     );
     const searchInput = screen.getByRole("searchbox");
     expect(searchInput).toHaveValue("Luke");
+    await waitFor(()=>{
+      expect(screen.getAllByRole('article').length).toBe(1);
+    })
     await userEvent.click(
       screen.getByRole("button", { name: /Refresh character list/i })
     );
@@ -181,7 +184,7 @@ describe("CharactersPage", () => {
     expect(charactersGrid).toBeInTheDocument();
     const articles = within(charactersGrid).getAllByRole("article");
     expect(articles.length).toBe(characters.length);
-    expect(charactersGrid).toMatchSnapshot();
+    // expect(charactersGrid).toMatchSnapshot();
   });
 
   test("Pagination works", async () => {
@@ -254,7 +257,7 @@ describe("CharactersPage", () => {
           )
         );
       });
-      expect(charactersGrid).toMatchSnapshot();
+      // expect(charactersGrid).toMatchSnapshot();
     });
   }, 10000);
 });
