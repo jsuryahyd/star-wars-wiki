@@ -1,4 +1,4 @@
-# [Star Wars Wiki](https://jsuryahyd.github.io/star-wars-wiki) [(Preview)](https://jsuryahyd.github.io/star-wars-wiki)
+# Star Wars Wiki [(Preview)](https://jsuryahyd.github.io/star-wars-wiki)
 
 ### Requirements: [✔️]
 
@@ -87,3 +87,4 @@
 - Generate Coverage Report (also as part of ci/cd pipeline)
 - Add Toast messages when a put/post api call is succeeded. (adding/removing favourites)
 - Implement "Undo" on put/post api calls. (within the toast, or within the card UI)
+- Replace Swapi.dev with Swapi.info for cleaner api structure
