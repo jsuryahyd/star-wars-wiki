@@ -1,4 +1,4 @@
-# [Star Wars Wiki](https://jsuryahyd.github.io/star-wars-wiki) [(Deployed)](https://jsuryahyd.github.io/star-wars-wiki)
+# [Star Wars Wiki](https://jsuryahyd.github.io/star-wars-wiki) [(Preview)](https://jsuryahyd.github.io/star-wars-wiki)
 
 ### Requirements: [✔️]
 
@@ -14,7 +14,7 @@
 
 - An SPA built with React, which can be deployed as a static site.[✔️]
 	- A Server Rendered site would also makes sense for SEO and faster initial page loads, as we can cache pages with common content.[✖️]
-- **Monorepo [✖️]**: A monorepo would make more sense if the project is part of a suite of applications and / or a ui component library is needed across the applications
+- **Monorepo [✖️]**: A monorepo would make sense if the project is part of a suite of applications and / or a ui component library is needed across the applications
 - **Micro frontends [✖️]**: As the project size increases with large number of screens and multiple teams working on them, a micro frontend architecture would be recommended.
 - Code splitting and Lazy loading (while not necessary in this case) can be implemented as bundle sizes grow, for faster page load times. [✖️]
 - Deploy to Github Pages using Github Actions [✔️]
@@ -36,8 +36,8 @@
 - MSW, IndexedDB for caching favourites list 
 	- MSW in browser can intercept crud operations on `/favourites` resource. Data can be persisted to indexedDB, as service workers do not have acccess to localstorage.
 - Vitest and testing library for component and integration tests 
-	- vitest is faster than jest and integrates well with vitest.
-	- testing-library is the better choice, for its DX and user-simulating API
+	- vitest is faster than jest and integrates well with vite.
+	- testing-library is the go to, and a better choice compard to enzyme, for its DX and user-simulating API
 
 ### Others
 - Tools like Sentry can be used for monitoring and observability.[✖️]
@@ -66,7 +66,7 @@
 - the current characterId state variable will be maintained in url
 
 ### Favourites Page:[✔️]
-- Can be similar to characters list page, with a heading "Favourites" 
+- Can be similar to characters list page, with local search and without pagination 
 
 ## Observations and Challenges
 ### Testing 
@@ -82,8 +82,9 @@
 ## TODOs
 - Improve quality of tests, by breaking scenarios in to multiple tests, with different msw response mocks in each test (`server.use()`)
 - Find workaround for flaky snapshot tests.
+- Find solution for flaky tests that use `server.use()`: server.use() precedes over default handler when test runs in isolation, but not in group.
 - Fix CI/CD pipeline
 - Generate Coverage Report (also as part of ci/cd pipeline)
-- Show toast messages when a put/post api call is succeeded.
-- Implement "Undo" on put/post api calls.
 - Better profile card design in home page.
+- Show toast messages when a put/post api call is succeeded. (adding/removing favourites)
+- Implement "Undo" on put/post api calls. (within the toast, or within the card UI)
