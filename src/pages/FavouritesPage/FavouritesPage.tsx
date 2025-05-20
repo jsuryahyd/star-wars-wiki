@@ -4,10 +4,8 @@ import {
   Flex,
   Grid,
   IconButton,
-  Menu,
   Spinner,
-  Text,
-  Portal,
+  Text
 } from "@chakra-ui/react";
 import { SlRefresh } from "react-icons/sl";
 import { capitalize } from "@/utils/utils";
@@ -33,7 +31,7 @@ export default function FavouritesPage() {
     refetch,
   } = useFavouritesList();
   const { mutate } = useMutation({
-    mutationFn: async (character: any) => {
+    mutationFn: async (character: favouriteCharacterDetails) => {
       return removeFavourite(character.uid);
     },
     onSuccess: (response, character) => {
@@ -63,7 +61,7 @@ export default function FavouritesPage() {
   });
 
   const { mutate: addFav } = useMutation({
-    mutationFn: async (character: any) => {
+    mutationFn: async (character: favouriteCharacterDetails) => {
       return addFavourite(character);
     },
     onSuccess: (response, character) => {
@@ -104,7 +102,7 @@ export default function FavouritesPage() {
           isCharactersError,
           refetch,
         }}
-        onRemoveFavourite={(character: any) => {
+        onRemoveFavourite={(character: favouriteCharacterDetails) => {
           mutate(character);
         }}
       />
@@ -186,7 +184,7 @@ function CharactersGrid({
               { label: "Height", value: character.height + " cm" },
             ]}
             id={character.uid}
-            renderTopRight={(id) => {
+            renderTopRight={() => {
               return (
                 <IconButton
                   aria-label="Remove from favourites"

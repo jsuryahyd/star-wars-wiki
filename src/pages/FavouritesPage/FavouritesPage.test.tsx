@@ -13,7 +13,7 @@ import { http, HttpResponse } from "msw";
 import userEvent from "@testing-library/user-event";
 
 const redirectedPageContent = "New Route Content";
-const routes: any[] = [
+const routes: {path:string, component: ()=>React.ReactNode}[] = [
   {
     path: "/character-details/$id",
     component: () => <div>{redirectedPageContent}</div>,
@@ -124,8 +124,7 @@ describe("FavouritesPage", () => {
     expect(articles.length).toBe(favourites.length);
 
     expect(articles[0]).toBeInTheDocument();
-    await userEvent.click(articles[0].children[0]);
-    screen.debug(articles[0].children[0]);
+    await userEvent.click(within(articles[0]).getByRole('link') as Element);
     await waitFor(() => {
       expect(screen.getByText(redirectedPageContent)).toBeInTheDocument();
     });

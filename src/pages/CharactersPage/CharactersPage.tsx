@@ -1,24 +1,21 @@
-import { useState, useEffect, useCallback, startTransition } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
-  Input,
   Button,
   Grid,
   Flex,
-  Spacer,
   Text,
   IconButton,
   Spinner,
   usePrevious,
 } from "@chakra-ui/react";
 import { SlRefresh } from "react-icons/sl";
-// Make sure you have installed react-icons: npm install react-icons
 import { CharacterCard } from "@/components/ui/CharacterCard/CharacterCard";
 
 import { useRouter } from "@tanstack/react-router";
 import Pagination from "@/components/ui/Pagination/Pagination";
 import { capitalize } from "@/utils/utils";
-import { useDebounceValue, useWindowSize } from "usehooks-ts";
+import { useWindowSize } from "usehooks-ts";
 import useCharactersList from "@/hooks/useCharactersList";
 import SearchInput from "@/components/ui/SearchInput/SearchInput";
 import { LuRefreshCw } from "react-icons/lu";
@@ -31,11 +28,6 @@ const CharactersPage = () => {
   const initialSearchQuery = router?.latestLocation?.search?.name || "";
   const [searchQuery, setSearchQuery] = useState(initialSearchQuery);
 
-  //  const { currentPage, setCurrentPage, pagesCount, total } = usePagination({
-  //     total: 0, // Initialize to 0, will be updated from API response
-  //     pageSize: 10,
-  //     initialPage: parseInt(searchParams.get('page') || '1', 10),
-  //   });
   const initialPageNum = parseInt(router.latestLocation.search.page || "1", 10);
   const [page, setPage] = useState(initialPageNum);
 
@@ -49,7 +41,7 @@ const CharactersPage = () => {
   } = useCharactersList({ page, searchQuery, limit: itemsPerPage });
   const prevSearchQuery = usePrevious(searchQuery);
   useEffect(() => {
-    const queryParams = { page };
+    const queryParams:{name?:string, page?:number} = { page };
     if (prevSearchQuery != undefined && prevSearchQuery !== searchQuery) {
       setPage(1);
       queryParams.page = 1;
@@ -58,12 +50,16 @@ const CharactersPage = () => {
       queryParams.name = searchQuery;
     }
     router.navigate({
-      search: queryParams,
+      search: queryParams as any,
     });
   }, [searchQuery, page, router, prevSearchQuery]);
 
   const handleRefresh = () => {
-    searchQuery !=="" ? setSearchQuery("") : refetch();
+    if (searchQuery !== "") {
+      setSearchQuery("");
+    } else {
+      refetch();
+    }
   };
 
   return (

@@ -13,7 +13,7 @@ export default function useCharacterDetails(id: string) {
     queryKey: ["characterDetails", id],
     queryFn: () => getCharacterDetails(id),
   });
-  let characterDetails = data
+  const characterDetails = data
     ? {
         ...data.result.properties,
         uid: data.result.uid,

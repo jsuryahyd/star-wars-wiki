@@ -5,8 +5,6 @@ import film from "../../../mocks/mock-data/film.json";
 import starship from "../../../mocks/mock-data/starship.json";
 import { server } from "../../../mocks/server";
 import { http, HttpResponse } from "msw";
-import { addFavourite, getAllFavourites, removeFavourite } from "../../../mocks/db";
-import defaultFavourites from "../../../mocks/mock-data/favourites.json";
 import userEvent from "@testing-library/user-event";
 describe("CharacterDetailsPage", () => {
   const routes = [
@@ -19,7 +17,17 @@ describe("CharacterDetailsPage", () => {
       component: () => <div>Home</div>,
     },
   ];
-
+beforeEach(()=>{
+	server.use(
+      http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people/:id", (req) => {
+        // const { id } = req.params;
+        console.log("sending empty movies");
+        // Mock response for the character details endpoint
+        return HttpResponse.json({
+          ...mockedUserData,});
+      })
+    );
+})
 	
   afterEach(async () => {
     // server.resetHandlers();//already added in setupTests.ts
@@ -147,9 +155,9 @@ describe("CharacterDetailsPage", () => {
 
   test("shows empty msg up on no movies", async () => {
 		//todo: does not override the default handler, when run in group
-    server.use(
+			server.use(
       http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people/:id", (req) => {
-        const { id } = req.params;
+        // const { id } = req.params;
         console.log("sending empty movies");
         // Mock response for the character details endpoint
         return HttpResponse.json({
@@ -253,7 +261,6 @@ describe("CharacterDetailsPage", () => {
   });
 
   test("Favourite and unFavourite actions work as expected", async () => {
-		console.log('favourites after removing 1', await getAllFavourites());
     const { router } = render(<CharacterDetailsPage />, { routes });
     await act(() => {
       router.navigate({
