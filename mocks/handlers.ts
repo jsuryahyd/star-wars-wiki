@@ -39,7 +39,7 @@ export let handlers = [
   }),
 
   // Handler for removing a character from favorites
-  http.delete("/api/favourites/:id", (req) => {
+  http.delete(import.meta.env.BASE_URL+"api/favourites/:id", (req) => {
     const { id } = req.params;
     removeFavourite(id as string);
     return HttpResponse.json({ message: "Character removed from favourites" });
