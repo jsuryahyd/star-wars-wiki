@@ -32,7 +32,6 @@ export default function FavouritesPage() {
     isCharactersError,
     refetch,
   } = useFavouritesList();
-  console.log(charactersWithDetails,"characters---")
   const { mutate } = useMutation({
     mutationFn: async (character: any) => {
       return removeFavourite(character.uid);
