@@ -25,10 +25,11 @@
 - React with Typescript for a SPA (setup with **vite** build tool)
 - Tanstack router for browser routing
 	- Considered a better alternative for React-router, I wanted to try it out.
-- Chakra UI for components and styling. 
-	- **Reason:** Part of the Allica Bank's tech stack. Ready to use components like Card, Grid etc would help in faster development time compared to Ark UI
+- Chakra UI for components and styling.
+	- **Reason:** Part of the Allica Bank's tech stack. Ready to use components like Card, Grid etc would help in faster development time compared to Ark UI. In a real project, with enough time and resources, we would lean towards more performant options like ArkUI or Shadcn.
 		- Out of the box support for responsive web design
-		- Reusable components are built as wrappers over Chakra UI components. But layout related components are directly used for now. 
+		- Reusable components can be built as wrappers over Chakra UI components, to avoid vendor locking. 
+		- Layout related components(Flex, Grid, Box etc) are directly used for now. 
 - Tanstack Query for data fetching and caching 
 	- Caching becomes much more critical in the application, as swapi.dev apis required calling of lot of subsequent apis, and server response times are slow.
 - Context API for global state management 
@@ -48,9 +49,10 @@
 	- NPM dependencies must be audited with npm audit and owasp top 10 vuln. must be checked[✖️]
 
 ## Development
-
+![Wireframes](docs/wireframes.svg)
+*Wireframes*
 ### Layout Component:[✔️]
-- A responsive layout that has a header(links to main page, favourites page) and main page, and a footer.
+- A responsive layout that has a header and main page, and a footer.
 - Header has Application title that links to home page
 - Favourites button that links to Favourites page
 - Light and Dark mode toggle button
@@ -59,11 +61,11 @@
 - Should implement a search input that filters by name from the server, with debouncing. Should sync the search input value with url query param.
 - Pagination should also be in sync with url param
 - Character Card component - with tests.
-- fetch and cache list with tanstack query. The api schema requires nested api calls. The merging logic should be consolidated in to custom hooks.
+- Fetch and cache list with tanstack query. The api schema requires nested api calls. The merging logic should be consolidated in to custom hooks.
 ### Character Page:[✔️]
 - should show details section, movies and starships sections.
 - show a prominent "Add to Favourites/Remove favourite" button
-- the current characterId state variable will be maintained in url
+- the current characterId will be fetched from the url
 
 ### Favourites Page:[✔️]
 - Can be similar to characters list page, with local search and without pagination 
@@ -81,12 +83,24 @@
 
 ## TODOs
 - Improve quality of tests, by breaking scenarios in to multiple tests, with different msw response mocks in each test (`server.use()`)
-- Find workaround for flaky snapshot tests.
+- ~~Find workaround for flaky snapshot tests.~~
 - Find solution for flaky tests that use `server.use()`: server.use() precedes over default handler when test runs in isolation, but not in group.
-- Fix CI/CD pipeline
+- ~~Fix CI/CD pipeline~~
 - Generate Coverage Report (also as part of ci/cd pipeline)
 - ~~Add Toast messages when a put/post api call is succeeded. (adding/removing favourites)~~
 - ~~Implement "Undo" on put/post api calls. (within the toast, or within the card UI)~~
 - Replace Swapi.dev with Swapi.info for cleaner api structure
 - Important: add error response handling in the code, and test cases.
  
+
+
+## Deployment Steps
+- Being Deployed to github pages at https://jsuryahyd.github.io/star-wars-wiki
+- CI/CD pipeline added at ./github/workflows/ci.yaml
+- Alternatively, we can set deployment option to 'branch' and run `npm run deploy` comand in local system in the branch (currently the branch is `github-pages-deployment`)
+
+## Local Development
+- Clone the repo
+- Install node version 20+
+- npm install
+- npm run dev

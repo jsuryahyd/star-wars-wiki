@@ -40,9 +40,17 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
       transition="transform 0.15s ease-in-out"
       _hover={{ transform: "scale(1.02)" }}
     >
-      <LinkOverlay as={RouterLink} to={`${import.meta.env.BASE_URL}character-details/${id}`}>
-        <Card.Root>
-          <a href="javascript:void(0);/*to prevent propagation to outer link*/" style={{position: 'absolute', top: '0.5rem', right: '0.5rem'}}>{renderTopRight?.(id)}</a>
+      <Card.Root>
+        <Box
+          position="absolute"
+          top="0.5rem"
+          right="0.5rem"
+          zIndex={1}
+          onClick={e=>e.stopPropagation()}
+        >
+          {renderTopRight?.(id)}
+        </Box>
+        <LinkOverlay as={RouterLink} to={`${import.meta.env.BASE_URL}character-details/${id}`}>
           <Flex align="center" gap={4} p={4}>
             <Avatar.Root size="2xl" name={name}>
               <Avatar.Fallback />
@@ -65,8 +73,8 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({
               ))}
             </Stack>
           </Flex>
-        </Card.Root>
-      </LinkOverlay>
+        </LinkOverlay>
+      </Card.Root>
     </LinkBox>
   );
 };

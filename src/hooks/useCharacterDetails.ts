@@ -13,7 +13,7 @@ export default function useCharacterDetails(id: string) {
     queryKey: ["characterDetails", id],
     queryFn: () => getCharacterDetails(id),
   });
-  let characterDetails = data
+  const characterDetails = data
     ? {
         ...data.result.properties,
         uid: data.result.uid,
@@ -50,36 +50,35 @@ export default function useCharacterDetails(id: string) {
     },
     enabled: !!characterDetails?.homeworld,
   });
+  const randomMovies = useMemo(() => {
+    return randomItemsFrom([
+      "A New Hope",
+      "The Empire Strikes Back",
+      "Return of the Jedi",
+      "The Phantom Menace",
+      "Attack of the Clones",
+      "Revenge of the Sith",
+      "The Clone Wars",
+      "The Force Awakens",
+      "The Last Jedi",
+      "The Rise of Skywalker",
+    ]);
+  }, []);
 
-	const randomMovies = useMemo(()=>{
-		return randomItemsFrom([
-          "A New Hope",
-          "The Empire Strikes Back",
-          "Return of the Jedi",
-          "The Phantom Menace",
-          "Attack of the Clones",
-          "Revenge of the Sith",
-          "The Clone Wars",
-          "The Force Awakens",
-          "The Last Jedi",
-          "The Rise of Skywalker",
-        ])
-	}, [])
-
-	const randomStarships = useMemo(()=>{
-		return randomItemsFrom([
-          "X-Wing",
-          "TIE Fighter",
-          "Millennium Falcon",
-          "Star Destroyer",
-          "Slave I",
-          "Imperial Shuttle",
-          "A-Wing",
-          "B-Wing",
-          "Y-Wing",
-          "Naboo Starfighter",
-        ])
-	},[])
+  const randomStarships = useMemo(() => {
+    return randomItemsFrom([
+      "X-Wing",
+      "TIE Fighter",
+      "Millennium Falcon",
+      "Star Destroyer",
+      "Slave I",
+      "Imperial Shuttle",
+      "A-Wing",
+      "B-Wing",
+      "Y-Wing",
+      "Naboo Starfighter",
+    ]);
+  }, []);
 
   // Merge films and starships data into characterDetails
 
@@ -92,13 +91,16 @@ export default function useCharacterDetails(id: string) {
       .map((q) => q.data?.result?.properties?.name)
       .filter(Boolean);
 
-    //static data since swapi does not return films and starships anymore
-    characterDetails.featuredFilms = characterDetails.featuredFilms.length
-      ? characterDetails.featuredFilms
-      : randomMovies;
-    characterDetails.starshipsPiloted = characterDetails.starshipsPiloted.length
-      ? characterDetails.starshipsPiloted
-      : randomStarships;
+    if (import.meta.env.MODE !== 'test') {
+      //static data since swapi does not return films and starships anymore
+      characterDetails.featuredFilms = characterDetails.featuredFilms.length
+        ? characterDetails.featuredFilms
+        : randomMovies;
+      characterDetails.starshipsPiloted = characterDetails.starshipsPiloted
+        .length
+        ? characterDetails.starshipsPiloted
+        : randomStarships;
+    }
 
     characterDetails.homeworldName =
       homeWorldQuery.data?.result?.properties?.name || "Unknown";

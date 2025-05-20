@@ -3,10 +3,9 @@ import CharacterDetailsPage from "./CharacterDetailsPage";
 import mockedUserData from "../../../mocks/mock-data/user.json";
 import film from "../../../mocks/mock-data/film.json";
 import starship from "../../../mocks/mock-data/starship.json";
+import mockPlanetResponse from "../../../mocks/mock-data/mockPlanetResponse";
 import { server } from "../../../mocks/server";
 import { http, HttpResponse } from "msw";
-import { addFavourite, getAllFavourites, removeFavourite } from "../../../mocks/db";
-import defaultFavourites from "../../../mocks/mock-data/favourites.json";
 import userEvent from "@testing-library/user-event";
 describe("CharacterDetailsPage", () => {
   const routes = [
@@ -19,7 +18,17 @@ describe("CharacterDetailsPage", () => {
       component: () => <div>Home</div>,
     },
   ];
-
+beforeEach(()=>{
+	server.use(
+      http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people/:id", (req) => {
+        // const { id } = req.params;
+        console.log("sending empty movies");
+        // Mock response for the character details endpoint
+        return HttpResponse.json({
+          ...mockedUserData,});
+      })
+    );
+})
 	
   afterEach(async () => {
     // server.resetHandlers();//already added in setupTests.ts
@@ -62,9 +71,10 @@ describe("CharacterDetailsPage", () => {
 
   test("loads and displays character details", async () => {
     const { router } = render(<CharacterDetailsPage />, { routes });
+		const characterId = 1
     await act(() => {
       router.navigate({
-        to: "/character-details/1",
+        to: "/character-details/"+characterId,
       });
     });
     const user = mockedUserData.result.properties;
@@ -75,6 +85,7 @@ describe("CharacterDetailsPage", () => {
       name: /character details/i,
     });
     expect(detailsSection).toBeInTheDocument();
+
 
     const hairColorDetails = within(detailsSection).getByTestId("hair-colour");
     expect(
@@ -100,7 +111,12 @@ describe("CharacterDetailsPage", () => {
     expect(
       within(homePlanetDetails).getByText("Home World")
     ).toBeInTheDocument();
-    expect(within(homePlanetDetails).getByText("Tatooine")).toBeInTheDocument();
+
+				//the implementation first renders sections, without dtails like homoworld name, etc. these details will load with separate apis
+		await waitFor(()=>{
+			const planetDetails = mockPlanetResponse({id:characterId})
+			expect(within(homePlanetDetails).getByText(planetDetails.result.properties.name)).toBeInTheDocument();
+		})
 
     const heightDetails = within(detailsSection).getByTestId("height");
     expect(within(heightDetails).getByText("Height")).toBeInTheDocument();
@@ -147,9 +163,9 @@ describe("CharacterDetailsPage", () => {
 
   test("shows empty msg up on no movies", async () => {
 		//todo: does not override the default handler, when run in group
-    server.use(
+			server.use(
       http.get(import.meta.env.VITE_SWAPI_BASE_URL + "/people/:id", (req) => {
-        const { id } = req.params;
+        // const { id } = req.params;
         console.log("sending empty movies");
         // Mock response for the character details endpoint
         return HttpResponse.json({
@@ -253,7 +269,6 @@ describe("CharacterDetailsPage", () => {
   });
 
   test("Favourite and unFavourite actions work as expected", async () => {
-		console.log('favourites after removing 1', await getAllFavourites());
     const { router } = render(<CharacterDetailsPage />, { routes });
     await act(() => {
       router.navigate({

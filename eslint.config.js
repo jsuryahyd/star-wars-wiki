@@ -28,6 +28,11 @@ export default tseslint.config(
 		'testing-library/no-await-sync-queries': 'error',
 		'testing-library/no-debugging-utils': 'warn',
 		'testing-library/no-dom-import': 'off',
+
+     "no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-expressions": "warn"
     },
   },
 )

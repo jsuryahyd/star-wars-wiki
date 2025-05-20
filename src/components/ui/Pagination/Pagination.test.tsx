@@ -24,11 +24,11 @@ describe("Pagination", () => {
       name: "pagination",
     });
     expect(pagination).toBeInTheDocument();
-    let nextButton = within(pagination).getByRole("button", {
+    const nextButton = within(pagination).getByRole("button", {
       name: /next page/i,
     });
     expect(nextButton).toBeInTheDocument();
-    let prevButton = within(pagination).getByRole("button", {
+    const prevButton = within(pagination).getByRole("button", {
       name: /previous page/i,
     });
     expect(prevButton).toBeInTheDocument();
@@ -72,11 +72,11 @@ describe("Pagination", () => {
         onPageChange={onPageChange}
       />
     );
-    let nextButton = within(pagination).getByRole("button", {
+    const nextButton = within(pagination).getByRole("button", {
       name: /next page/i,
     });
     expect(nextButton).toBeInTheDocument();
-    let prevButton = within(pagination).getByRole("button", {
+    const prevButton = within(pagination).getByRole("button", {
       name: /previous page/i,
     });
     

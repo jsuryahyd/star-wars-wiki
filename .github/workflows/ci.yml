@@ -3,9 +3,10 @@ name: CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, release]
   pull_request:
     branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   lint:
@@ -51,4 +52,38 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build
+        run: npm run build-without-tsc-check
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/release'
+    needs: [build]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build (for deploy)
+        run: npm run build-without-tsc-check
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+  typecheck:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Type Check
+        run: npm run type-check

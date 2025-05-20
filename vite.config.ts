@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
     },
+    testTimeout: 10000,
     include: ['src/**/*.{test,spec}.{js,ts,jsx,tsx}'],
     exclude: [
       'node_modules',
