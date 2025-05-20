@@ -34,7 +34,7 @@ jobs:
         run: npm ci
       - name: Run tests
         continue-on-error: true
-        run: CI_SKIP_FAILING_TESTS=true npm test
+        run: CI_SKIP_FAILING_TESTS=true npm test -- --coverage
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
