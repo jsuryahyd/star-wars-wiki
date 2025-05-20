@@ -80,7 +80,7 @@ describe("FavouritesPage", () => {
 
   test("shows error message and retry button on load error", async () => {
     server.use(
-      http.get("/api/favourites", () => {
+      http.get(import.meta.env.BASE_URL+"api/favourites", () => {
         return HttpResponse.json(
           { message: "Internal Server Error" },
           { status: 500 }
@@ -104,7 +104,7 @@ describe("FavouritesPage", () => {
   _test("shows 'No Favourites Yet' when list is empty", async () => {
     // Simulate error state using MSW
     server.use(
-      http.get("/api/favourites", () => {
+      http.get(import.meta.env.BASE_URL+"api/favourites", () => {
         return HttpResponse.json([], { status: 200 });
       })
     );

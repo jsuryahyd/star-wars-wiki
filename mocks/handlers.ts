@@ -51,7 +51,7 @@ export let handlers = [
     return HttpResponse.json(await getAllFavourites()); //todo: this will cause issues in tests, as concurrent tests will try to access the same DB
   }),
 
-  http.get("/api/favourites/is-favourite/:id", async (req) => {
+  http.get(import.meta.env.BASE_URL+"api/favourites/is-favourite/:id", async (req) => {
     const { id } = req.params;
     const fav = await getFavouriteById(id as string);
     // console.log("is-favourite",id, fav);

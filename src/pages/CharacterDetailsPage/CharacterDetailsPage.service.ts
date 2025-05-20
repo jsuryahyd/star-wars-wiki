@@ -25,7 +25,7 @@ export async function getStarship(starshipUrl: string): Promise<any> {
 }
 
 export async function getIsFavourite(id: string): Promise<boolean> {
-	const response = await fetch(`/api/favourites/is-favourite/${id}`);
+	const response = await fetch(`${import.meta.env.BASE_URL}api/favourites/is-favourite/${id}`);
 	if (!response.ok) {
 		throw new Error("Network response was not ok");
 	}
