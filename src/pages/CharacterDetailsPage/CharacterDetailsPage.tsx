@@ -67,8 +67,13 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
       refetch();
       queryClient.invalidateQueries({ queryKey: ["favourites"] });
     },
-    onError: () => {
-      console.log("Error removing from favourites");
+    onError: (err, action) => {
+      toaster.error({
+        title: "Error",
+        description: action.addFav
+          ? "An Error occured while adding the character to Favourites."
+          : "An Error occured while removing the character from Favourites.",
+      });
     },
   });
 

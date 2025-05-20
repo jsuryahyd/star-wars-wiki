@@ -53,7 +53,10 @@ export default function FavouritesPage() {
       });
     },
     onError: () => {
-      console.log("Error removing favourite");
+       toaster.error({
+        title: "Error",
+        description: "An Error occured while removing the character to Favourites."
+      })
     },
     onSettled: () => {
       // refetch();
@@ -75,7 +78,10 @@ export default function FavouritesPage() {
       }); //if we go to character details page, it should fetch the updated data
     },
     onError: () => {
-      console.log("Error adding favourite");
+      toaster.error({
+        title: "Error",
+        description: "An Error occured while adding the character to Favourites."
+      })
     },
   });
 

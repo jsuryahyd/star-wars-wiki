@@ -14,7 +14,7 @@ export function fetchPlanet(url: string): Promise<{result: {properties: any, uid
 
 
 export function removeFavourite(id:string){
-	return fetch(`/api/favourites/${id}`, {
+	return fetch(`${import.meta.env.BASE_URL}api/favourites/${id}`, {
 		method: 'DELETE',
 	})
 		.then((response) => {
@@ -23,9 +23,6 @@ export function removeFavourite(id:string){
 			}
 			return response.json();
 		})
-		.catch((error) => {
-			console.error('There was a problem with the fetch operation:', error);
-		});
 }
 
 export function addFavourite(favourite: {uid: string, name: string, url?: string,gender: string, homeWorld: string, height: string}) {
@@ -42,7 +39,4 @@ export function addFavourite(favourite: {uid: string, name: string, url?: string
 			}
 			return response.json();
 		})
-		.catch((error) => {
-			console.error('There was a problem with the fetch operation:', error);
-		});
 }
