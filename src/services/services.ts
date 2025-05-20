@@ -29,7 +29,7 @@ export function removeFavourite(id:string){
 }
 
 export function addFavourite(favourite: {uid: string, name: string, url?: string,gender: string, homeWorld: string, height: string}) {
-	return fetch('/api/favourites', {
+	return fetch(import.meta.env.BASE_URL + 'api/favourites', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',

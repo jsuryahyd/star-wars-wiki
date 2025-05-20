@@ -15,4 +15,4 @@ createRoot(document.getElementById('root')!).render(
   // </StrictMode>,
 )
 })
-console.log(import.meta.env.PROD, 'is prod')
+console.log(import.meta.env ,'is prod')
