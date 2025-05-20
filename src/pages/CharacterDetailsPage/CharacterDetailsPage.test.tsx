@@ -3,6 +3,7 @@ import CharacterDetailsPage from "./CharacterDetailsPage";
 import mockedUserData from "../../../mocks/mock-data/user.json";
 import film from "../../../mocks/mock-data/film.json";
 import starship from "../../../mocks/mock-data/starship.json";
+import mockPlanetResponse from "../../../mocks/mock-data/mockPlanetResponse";
 import { server } from "../../../mocks/server";
 import { http, HttpResponse } from "msw";
 import userEvent from "@testing-library/user-event";
@@ -70,9 +71,10 @@ beforeEach(()=>{
 
   test("loads and displays character details", async () => {
     const { router } = render(<CharacterDetailsPage />, { routes });
+		const characterId = 1
     await act(() => {
       router.navigate({
-        to: "/character-details/1",
+        to: "/character-details/"+characterId,
       });
     });
     const user = mockedUserData.result.properties;
@@ -83,6 +85,7 @@ beforeEach(()=>{
       name: /character details/i,
     });
     expect(detailsSection).toBeInTheDocument();
+
 
     const hairColorDetails = within(detailsSection).getByTestId("hair-colour");
     expect(
@@ -108,7 +111,12 @@ beforeEach(()=>{
     expect(
       within(homePlanetDetails).getByText("Home World")
     ).toBeInTheDocument();
-    expect(within(homePlanetDetails).getByText("Tatooine")).toBeInTheDocument();
+
+				//the implementation first renders sections, without dtails like homoworld name, etc. these details will load with separate apis
+		await waitFor(()=>{
+			const planetDetails = mockPlanetResponse({id:characterId})
+			expect(within(homePlanetDetails).getByText(planetDetails.result.properties.name)).toBeInTheDocument();
+		})
 
     const heightDetails = within(detailsSection).getByTestId("height");
     expect(within(heightDetails).getByText("Height")).toBeInTheDocument();

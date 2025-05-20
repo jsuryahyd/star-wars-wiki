@@ -6,8 +6,9 @@
   "homepage": "https://jsuryahyd.github.io/star-wars-wiki/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run type-check && vite build",
     "build-without-tsc-check": "vite build",
+    "type-check": "tsc -b",
     "lint": "eslint . --max-warnings=150",
     "test": "vitest",
     "preview": "vite preview",

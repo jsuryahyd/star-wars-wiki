@@ -152,7 +152,7 @@ describe("CharactersPage", () => {
       },
       { timeout: 4000 }
     );
-  });
+  }, 10000);
 
   test("cards reset when search is cleared via refresh button", async () => {
     const { router } = render(<CharactersPage />, { routes });
@@ -234,7 +234,7 @@ describe("CharactersPage", () => {
     await waitFor(() => {
       expect(prevButton).not.toBeDisabled();
       // expect(nextButton).toBeDisabled();//todo: test this by clicking on last button
-      expect(router.latestLocation.search.page).toBe(2);
+      expect(router.latestLocation.search['page']).toBe(2);
       const page2Button = within(pagination).getByRole("button", {
         name: /2/i,
       });

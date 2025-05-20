@@ -26,15 +26,15 @@ export default function Layout({ children }: LayoutProps) {
 							</Heading>
 						</Link>
           <Spacer />
-          <IconButton
-            as={Link}
-            to={import.meta.env.BASE_URL +"favourites"}
-            aria-label="Favourites"
-            variant="ghost"
-            colorScheme="yellow"
-            fontSize="xl"
-            ml={2}
-          ><FaRegHeart /></IconButton>
+          <Link to={import.meta.env.BASE_URL + "favourites"}>
+            <IconButton
+              aria-label="Favourites"
+              variant="ghost"
+              colorScheme="yellow"
+              fontSize="xl"
+              ml={2}
+            ><FaRegHeart /></IconButton>
+          </Link>
           <IconButton
             aria-label="Toggle color mode"
             onClick={toggleColorMode}

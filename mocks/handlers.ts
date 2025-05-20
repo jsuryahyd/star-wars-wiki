@@ -1,5 +1,5 @@
 import { http, HttpResponse } from "msw";
-
+import mockPlanetResponse from "./mock-data/mockPlanetResponse"
 import defaultFavourites from "./mock-data/favourites.json";
 import defaultCharacters from "./mock-data/characters.json";
 import film from "./mock-data/film.json";
@@ -177,31 +177,7 @@ if (isTestingEnv) {
       const { id } = req.params;
       // console.log("Request to SWAPI:", req.request.url);
       // Mock response for the planet details endpoint
-      return HttpResponse.json({
-        message: "ok",
-        result: {
-          properties: {
-            name: "Tatooine",
-            rotation_period: "23",
-            orbital_period: "304",
-            diameter: "10465",
-            climate: "arid",
-            gravity: "1 standard",
-            terrain: "desert",
-            surface_water: "1",
-            population: "200000",
-            residents: [
-              import.meta.env.VITE_SWAPI_BASE_URL + "/people/1/",
-              import.meta.env.VITE_SWAPI_BASE_URL + "/people/2/",
-              // ...
-            ],
-          },
-          _id: id,
-          description: "A planet in the Star Wars universe",
-          uid: id,
-          __v: 2,
-        },
-      });
+      return HttpResponse.json(mockPlanetResponse({id}));
     }),
 
     http.all(import.meta.env.VITE_SWAPI_BASE_URL + "/*", (req) => {
