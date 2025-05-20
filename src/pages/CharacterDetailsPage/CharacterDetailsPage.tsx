@@ -42,7 +42,7 @@ interface CharacterDetailsProps {
 const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
   const { id } = useParams({ strict: false });
   const { characterDetails, error, isLoading } = useCharacterDetails(id);
-
+  const router = useRouter()
   const { data: isFavourite, refetch } = useQuery({
     queryKey: ["isFavourite", id],
     queryFn: () => getIsFavourite(id),
@@ -88,12 +88,12 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
   if (error) {
     console.error("Error loading character details:", error);
     return (
-      <Flex justify="center" align="center" height="100vh">
+      <Box justify="center" align="center" height="60vh">
         <Text color="red.500">Error loading character details</Text>
         <Button mt={4} onClick={() => router.navigate({ to: "/characters" })}>
           Go Back
         </Button>
-      </Flex>
+      </Box>
     );
   }
 
@@ -107,6 +107,7 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
     onAddToFavorites,
     characterId,
   } = characterDetails;
+  console.log('character--details', characterDetails)
 
   return (
     <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap={6} width="full">

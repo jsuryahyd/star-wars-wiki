@@ -40,6 +40,8 @@ export default function useCharactersList({
                 uid: r.uid || r.properties.uid,
               };
             }),
+            total_pages: Math.ceil((res as charactersFilterRespsonse).result.length / limit),
+            total_records: (res as charactersFilterRespsonse).result.length
           };
         }
         return res as charactersListResponse;

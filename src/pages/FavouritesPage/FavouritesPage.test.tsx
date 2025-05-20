@@ -13,7 +13,7 @@ import { http, HttpResponse } from "msw";
 import userEvent from "@testing-library/user-event";
 
 const redirectedPageContent = "New Route Content";
-const routes: {path:string, component: ()=>React.ReactNode}[] = [
+const routes: { path: string; component: () => React.ReactNode }[] = [
   {
     path: "/character-details/$id",
     component: () => <div>{redirectedPageContent}</div>,
@@ -43,17 +43,19 @@ describe("FavouritesPage", () => {
           message: "Character removed from favourites",
         });
       }),
-      http.post(import.meta.env.BASE_URL+"api/favourites", async (req) => {
-          const newFavourite = (await req.request.json()) as typeof favourites[0];
-          if (!newFavourite) return HttpResponse.json({ error: "Invalid request" });
-          
-            favs.push(newFavourite)
-            favs.sort((a,b)=>+a.uid > +b.uid ? 1 : -1)
-            return HttpResponse.json({
-              message: "Character added to favourites",
-              favourite: newFavourite,
-            });
-        }),
+      http.post(import.meta.env.BASE_URL + "api/favourites", async (req) => {
+        const newFavourite =
+          (await req.request.json()) as (typeof favourites)[0];
+        if (!newFavourite)
+          return HttpResponse.json({ error: "Invalid request" });
+
+        favs.push(newFavourite);
+        favs.sort((a, b) => (+a.uid > +b.uid ? 1 : -1));
+        return HttpResponse.json({
+          message: "Character added to favourites",
+          favourite: newFavourite,
+        });
+      })
     );
   });
 
@@ -80,13 +82,14 @@ describe("FavouritesPage", () => {
 
   test("shows error message and retry button on load error", async () => {
     server.use(
-      http.get(import.meta.env.BASE_URL+"api/favourites", () => {
+      http.get(import.meta.env.BASE_URL + "api/favourites", () => {
         return HttpResponse.json(
           { message: "Internal Server Error" },
           { status: 500 }
         );
       })
     );
+
     const { router } = render(<FavouritesPage />, { routes });
     await act(() => router.navigate({ to: "/" }));
     expect(
@@ -94,8 +97,17 @@ describe("FavouritesPage", () => {
     ).toBeInTheDocument();
     const retryBtn = screen.getByRole("button", { name: /retry/i });
     expect(retryBtn).toBeInTheDocument();
-    fireEvent.click(retryBtn);
-    // Optionally, assert refetch or loading state
+    server.use(
+      http.get(import.meta.env.BASE_URL + "api/favourites", () => {
+        return HttpResponse.json([...favourites]);
+      })
+    );
+    await userEvent.click(retryBtn);
+
+    await waitFor(()=>{
+      expect(screen.queryByRole('button', {name : /retry/i})).not.toBeInTheDocument(); //even if progress bar appears, we know retry api is called.
+    })
+    
   });
   let _test = test;
   if (import.meta.env.CI_SKIP_FAILING_TESTS) {
@@ -104,7 +116,7 @@ describe("FavouritesPage", () => {
   _test("shows 'No Favourites Yet' when list is empty", async () => {
     // Simulate error state using MSW
     server.use(
-      http.get(import.meta.env.BASE_URL+"api/favourites", () => {
+      http.get(import.meta.env.BASE_URL + "api/favourites", () => {
         return HttpResponse.json([], { status: 200 });
       })
     );
@@ -124,7 +136,7 @@ describe("FavouritesPage", () => {
     expect(articles.length).toBe(favourites.length);
 
     expect(articles[0]).toBeInTheDocument();
-    await userEvent.click(within(articles[0]).getByRole('link') as Element);
+    await userEvent.click(within(articles[0]).getByRole("link") as Element);
     await waitFor(() => {
       expect(screen.getByText(redirectedPageContent)).toBeInTheDocument();
     });
@@ -155,7 +167,7 @@ describe("FavouritesPage", () => {
   });
 
   test("undo remove favourite, brings back removed card", async () => {
- const { router } = render(<FavouritesPage />, { routes });
+    const { router } = render(<FavouritesPage />, { routes });
     await act(() => router.navigate({ to: "/" }));
     await waitFor(() => {
       expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
@@ -168,7 +180,7 @@ describe("FavouritesPage", () => {
       name: /remove from favourites/i,
     });
     await userEvent.click(removeCard);
-    let alert: HTMLElement
+    let alert: HTMLElement;
     await waitFor(() => {
       alert = screen.getByRole("status");
       expect(screen.getByRole("status")).toBeInTheDocument();
@@ -176,18 +188,15 @@ describe("FavouritesPage", () => {
 
       expect(screen.getAllByRole("article").length).toBe(favourites.length - 1);
     });
-    //==== 
-    const button = within(alert!).getByRole('button',{name:/undo/i})
-    expect(button).toBeInTheDocument()
-    await userEvent.click(button)
+    //====
+    const button = within(alert!).getByRole("button", { name: /undo/i });
+    expect(button).toBeInTheDocument();
+    await userEvent.click(button);
 
-    await waitFor(()=>{
-      const articles = screen.getAllByRole("article")
+    await waitFor(() => {
+      const articles = screen.getAllByRole("article");
       expect(articles.length).toBe(favourites.length);
-      expect(articles[0]).toHaveTextContent(new RegExp(favourites[0].name))
-
-    })
-
-
+      expect(articles[0]).toHaveTextContent(new RegExp(favourites[0].name));
+    });
   });
 });

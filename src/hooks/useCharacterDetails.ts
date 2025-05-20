@@ -146,9 +146,9 @@ export default function useCharacterDetails(id: string) {
   return {
     characterDetails: error ? null : characterDetails,
     error:
-      error ||
+      error || homeWorldQuery.error || 
       (anyFilmError ? "One or more films failed to load" : null) ||
-      (anyStarshipError ? "One or more starships failed to load" : null),
+      (anyStarshipError ? "One or more starships failed to load" : null), //todo: donot hide whole content for planet, films and starship api errors
     isLoading,
   };
 }

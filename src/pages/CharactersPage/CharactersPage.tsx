@@ -123,7 +123,7 @@ function CharactersGrid({ charactersData }: any) {
 
   if (isCharactersError) {
     return (
-      <Box p={4} textAlign="center">
+      <Box p={4} textAlign="center" height="60vh">
         <Text color="red.500">Error loading characters</Text>
         <Button mt={4} onClick={refetch}>
           <SlRefresh style={{ marginRight: 8 }} />

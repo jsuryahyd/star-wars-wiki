@@ -1,6 +1,5 @@
 import { http, HttpResponse } from "msw";
 import mockPlanetResponse from "./mock-data/mockPlanetResponse"
-import defaultFavourites from "./mock-data/favourites.json";
 import defaultCharacters from "./mock-data/characters.json";
 import film from "./mock-data/film.json";
 import starship from "./mock-data/starship.json";

@@ -97,7 +97,7 @@
 ## Deployment Steps
 - Being Deployed to github pages at https://jsuryahyd.github.io/star-wars-wiki
 - CI/CD pipeline added at ./github/workflows/ci.yaml
-- Alternatively, we can set deployment option to 'branch' and run `npm run deploy` comand in local system in the branch (currently the branch is `github-pages-deployment`)
+- Deploy job in the ci.yml will build and commit the dist folder to `gh-pages` branch. In Github repo -> settings -> pages -> set deploy from "branch" and select `gh-pages`. This will publish the site.
 
 ## Local Development
 - Clone the repo
