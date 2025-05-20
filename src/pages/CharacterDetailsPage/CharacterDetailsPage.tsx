@@ -107,7 +107,6 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
     onAddToFavorites,
     characterId,
   } = characterDetails;
-  console.log('character--details', characterDetails)
 
   return (
     <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap={6} width="full">

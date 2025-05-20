@@ -81,6 +81,13 @@
 ### CI/CD pipelines
 - Troubleshooting typescript, eslint configs, and test failures.
 
+## Testing Reports
+![Tests Passing Locally](docs/tests-passing.png)
+*Tests Passing Locally*
+
+![coverage](docs/coverage-report.png)
+*Coverage Report*
+
 ## TODOs
 - Improve quality of tests, by breaking scenarios in to multiple tests, with different msw response mocks in each test (`server.use()`)
 - ~~Find workaround for flaky snapshot tests.~~
@@ -90,7 +97,7 @@
 - ~~Add Toast messages when a put/post api call is succeeded. (adding/removing favourites)~~
 - ~~Implement "Undo" on put/post api calls. (within the toast, or within the card UI)~~
 - Replace Swapi.dev with Swapi.info for cleaner api structure
-- Important: add error response handling in the code, and test cases.
+- ~~Important: add error response handling in the code, and test cases.~~
  
 
 
