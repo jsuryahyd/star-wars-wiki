@@ -1,4 +1,4 @@
-# [Star Wars Wiki](https://jsuryahyd.github.io/star-wars-wiki) [(Preview)](https://jsuryahyd.github.io/star-wars-wiki)
+# Star Wars Wiki [(Preview)](https://jsuryahyd.github.io/star-wars-wiki)
 
 ### Requirements: [✔️]
 
@@ -85,6 +85,8 @@
 - Find solution for flaky tests that use `server.use()`: server.use() precedes over default handler when test runs in isolation, but not in group.
 - Fix CI/CD pipeline
 - Generate Coverage Report (also as part of ci/cd pipeline)
-- Better profile card design in home page.
-- Show toast messages when a put/post api call is succeeded. (adding/removing favourites)
-- Implement "Undo" on put/post api calls. (within the toast, or within the card UI)
+- ~~Add Toast messages when a put/post api call is succeeded. (adding/removing favourites)~~
+- ~~Implement "Undo" on put/post api calls. (within the toast, or within the card UI)~~
+- Replace Swapi.dev with Swapi.info for cleaner api structure
+- Important: add error response handling in the code, and test cases.
+ 

@@ -12,17 +12,19 @@ import {
 import { SlRefresh } from "react-icons/sl";
 import { capitalize } from "@/utils/utils";
 import { CharacterCard } from "@/components/ui/CharacterCard/CharacterCard";
-import useFavouritesList from "@/hooks/useFavouritesList";
-import { LuCross, LuDelete, LuListX, LuTrash, LuX } from "react-icons/lu";
+import useFavouritesList, {
+  type favouritesListQueryResult,
+} from "@/hooks/useFavouritesList";
+import { LuX } from "react-icons/lu";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { removeFavourite } from "@/services/services";
+import { addFavourite, removeFavourite } from "@/services/services";
 import SearchInput from "@/components/ui/SearchInput/SearchInput";
 import { useState } from "react";
-import { characters } from "../../../mocks/handlers";
+import { toaster } from "@/components/ui/toaster";
+import type { favouriteCharacterDetails } from "./Favourites.service";
 
 export default function FavouritesPage() {
-
-	const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   const queryClient = useQueryClient();
   const {
     isCharactersLoading,
@@ -31,12 +33,26 @@ export default function FavouritesPage() {
     refetch,
   } = useFavouritesList();
   const { mutate } = useMutation({
-    mutationFn: async (id: string) => {
-      return removeFavourite(id);
+    mutationFn: async (character: any) => {
+      return removeFavourite(character.uid);
     },
-    onSuccess: (data, id) => {
+    onSuccess: (response, character) => {
+      toaster.success({
+        title: "Removed from Favourites",
+        description: `${character.name} removed from favourites`,
+        // status: "success",
+        action: {
+          label: "Undo",
+          onClick: () => {
+            addFav(character);
+          },
+        },
+        duration: 5000,
+      });
       refetch();
-      queryClient.invalidateQueries(["isFavourite",id]);
+      queryClient.invalidateQueries({
+        queryKey: ["isFavourite", character.uid],
+      });
     },
     onError: () => {
       console.log("Error removing favourite");
@@ -45,38 +61,64 @@ export default function FavouritesPage() {
       // refetch();
     },
   });
+
+  const { mutate: addFav } = useMutation({
+    mutationFn: async (character: any) => {
+      return addFavourite(character);
+    },
+    onSuccess: (response, character) => {
+      toaster.success({
+        title: "Added to Favourites",
+        description: `${character.name} added back to favourites`,
+      });
+      refetch();
+      queryClient.invalidateQueries({
+        queryKey: ["isFavourite", character.uid],
+      }); //if we go to character details page, it should fetch the updated data
+    },
+    onError: () => {
+      console.log("Error adding favourite");
+    },
+  });
+
   return (
     <Flex direction="column" align="center" margin="0 auto">
-			<Flex mb={4} width="full" align="center">
-			<SearchInput 
-				placeholder="Search by name"
-				value={searchQuery}
-				onChange={(value: string) => {
-					setSearchQuery(value);
-				}}
-				/>
-				</Flex>
+      <Flex mb={4} width="full" align="center">
+        <SearchInput
+          placeholder="Search by name"
+          value={searchQuery}
+          onChange={(value: string) => {
+            setSearchQuery(value);
+          }}
+        />
+      </Flex>
       <CharactersGrid
         charactersData={{
           isCharactersLoading,
-          charactersWithDetails:charactersWithDetails?.filter((character: any) => {
-						if (searchQuery === "") return true;
-						return character.name
-							.toLowerCase()
-							.includes(searchQuery.toLowerCase());
-					}),
+          charactersWithDetails: charactersWithDetails?.filter((character) => {
+            if (searchQuery === "") return true;
+            return character.name
+              .toLowerCase()
+              .includes(searchQuery.toLowerCase());
+          }),
           isCharactersError,
           refetch,
         }}
-        onRemoveFavourite={(id: string) => {
-          mutate(id);
+        onRemoveFavourite={(character: any) => {
+          mutate(character);
         }}
       />
     </Flex>
   );
 }
 
-function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
+function CharactersGrid({
+  charactersData,
+  onRemoveFavourite,
+}: {
+  charactersData: favouritesListQueryResult;
+  onRemoveFavourite: (character: favouriteCharacterDetails) => void;
+}) {
   const {
     isCharactersLoading,
     charactersWithDetails,
@@ -137,7 +179,7 @@ function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
           <CharacterCard
             key={character.uid}
             name={character.name}
-						avatarUrl={character.avatarUrl}
+            avatarUrl={character.avatarUrl}
             details={[
               { label: "Gender", value: capitalize(character.gender === "n/a" ? "N/A" : character.gender) },
               { label: "Home Planet", value: character.homeWorld },
@@ -151,10 +193,10 @@ function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
                   variant="ghost"
                   colorScheme="red"
                   size="sm"
-              		onClick={(e) => {
-              			e.stopPropagation();
-              			onRemoveFavourite(id);
-              		}}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRemoveFavourite(character);
+                  }}
                 >
                   <LuX />
                 </IconButton>
@@ -177,7 +219,7 @@ function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
               //             <Menu.Item
               //               value="new-txt-a"
               //               onClick={() => {
-							// 								e.stopPropagation();
+              // 								e.stopPropagation();
               //                 onRemoveFavourite(id);
               //               }}
               //             >
@@ -196,4 +238,3 @@ function CharactersGrid({ charactersData, onRemoveFavourite }: any) {
     </Grid>
   );
 }
-

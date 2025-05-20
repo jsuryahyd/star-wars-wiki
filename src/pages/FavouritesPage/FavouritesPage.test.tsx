@@ -12,12 +12,49 @@ import { server } from "../../../mocks/server";
 import { http, HttpResponse } from "msw";
 import userEvent from "@testing-library/user-event";
 
+const redirectedPageContent = "New Route Content";
 const routes: any[] = [
-  { path: "/favourites/:id", component: () => <div>Favourite page 1</div> },
+  {
+    path: "/character-details/$id",
+    component: () => <div>{redirectedPageContent}</div>,
+  },
 ];
 describe("FavouritesPage", () => {
   afterEach(() => {
     server.resetHandlers();
+    // clearFavourites();
+  });
+
+  beforeEach(async () => {
+    //wrong to do so, since all test files are run in parallel, accessing same DB. Instead use Server.use() to mock the response
+    //  for(let f of favourites){
+    //   await addFavourite(f)//add default favs to db.
+    // }
+
+    let favs = [...favourites];
+    server.use(
+      http.get(import.meta.env.BASE_URL + "api/favourites", () => {
+        return HttpResponse.json(favs);
+      }),
+      http.delete(import.meta.env.BASE_URL + "api/favourites/:id", (req) => {
+        const { id } = req.params;
+        favs = favs.filter((f) => f.uid !== id);
+        return HttpResponse.json({
+          message: "Character removed from favourites",
+        });
+      }),
+      http.post(import.meta.env.BASE_URL+"api/favourites", async (req) => {
+          const newFavourite = (await req.request.json()) as typeof favourites[0];
+          if (!newFavourite) return HttpResponse.json({ error: "Invalid request" });
+          
+            favs.push(newFavourite)
+            favs.sort((a,b)=>+a.uid > +b.uid ? 1 : -1)
+            return HttpResponse.json({
+              message: "Character added to favourites",
+              favourite: newFavourite,
+            });
+        }),
+    );
   });
 
   test("renders as expected", async () => {
@@ -41,9 +78,7 @@ describe("FavouritesPage", () => {
     });
   });
 
-  test.skip("shows error message and retry button on error", async () => {
-    // Simulate error state using MSW
-    // Remove all existing handlers so this one takes precedence
+  test("shows error message and retry button on load error", async () => {
     server.use(
       http.get("/api/favourites", () => {
         return HttpResponse.json(
@@ -55,7 +90,7 @@ describe("FavouritesPage", () => {
     const { router } = render(<FavouritesPage />, { routes });
     await act(() => router.navigate({ to: "/" }));
     expect(
-      await screen.findByText(/Error loading characters/i)
+      await screen.findByText(/Error loading favourites/i)
     ).toBeInTheDocument();
     const retryBtn = screen.getByRole("button", { name: /retry/i });
     expect(retryBtn).toBeInTheDocument();
@@ -78,24 +113,82 @@ describe("FavouritesPage", () => {
     expect(await screen.findByText(/No Favourites Yet/i)).toBeInTheDocument();
   });
 
-  _test("calls removeFavourite when remove button is clicked", async () => {
+  test("navigates to character details page when a card is clicked", async () => {
     const { router } = render(<FavouritesPage />, { routes });
     await act(() => router.navigate({ to: "/" }));
     await waitFor(() => {
       expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
     });
+
     const articles = screen.getAllByRole("article");
     expect(articles.length).toBe(favourites.length);
-    const removeButton = within(articles[0]).getByRole("button", {
-      name: /remove/i,
-    });
-    expect(removeButton).toBeInTheDocument();
-    await userEvent.click(removeButton);
 
-    // Optionally, assert that the character is removed from the list
+    expect(articles[0]).toBeInTheDocument();
+    await userEvent.click(articles[0].children[0]);
+    screen.debug(articles[0].children[0]);
     await waitFor(() => {
-      expect(screen.queryByText(/luke skywalker/i)).not.toBeInTheDocument();
+      expect(screen.getByText(redirectedPageContent)).toBeInTheDocument();
+    });
+  });
+
+  test("can remove favourite card and show success toast", async () => {
+    const { router } = render(<FavouritesPage />, { routes });
+    await act(() => router.navigate({ to: "/" }));
+    await waitFor(() => {
+      expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
+    });
+
+    const articles = screen.getAllByRole("article");
+    expect(articles.length).toBe(favourites.length);
+    const firstCard = articles[0];
+    const removeCard = within(firstCard).getByRole("button", {
+      name: /remove from favourites/i,
+    });
+    await userEvent.click(removeCard);
+    await waitFor(() => {
+      const alert = screen.getByRole("status");
+      expect(alert).toBeInTheDocument();
+      expect(alert).toHaveTextContent(/removed from favourites/i);
+
+      //takes time for react query to refetch
       expect(screen.getAllByRole("article").length).toBe(favourites.length - 1);
     });
+  });
+
+  test("undo remove favourite, brings back removed card", async () => {
+ const { router } = render(<FavouritesPage />, { routes });
+    await act(() => router.navigate({ to: "/" }));
+    await waitFor(() => {
+      expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
+    });
+
+    const articles = screen.getAllByRole("article");
+    expect(articles.length).toBe(favourites.length);
+    const firstCard = articles[0];
+    const removeCard = within(firstCard).getByRole("button", {
+      name: /remove from favourites/i,
+    });
+    await userEvent.click(removeCard);
+    let alert: HTMLElement
+    await waitFor(() => {
+      alert = screen.getByRole("status");
+      expect(screen.getByRole("status")).toBeInTheDocument();
+      expect(alert).toHaveTextContent(/removed from favourites/i);
+
+      expect(screen.getAllByRole("article").length).toBe(favourites.length - 1);
+    });
+    //==== 
+    const button = within(alert!).getByRole('button',{name:/undo/i})
+    expect(button).toBeInTheDocument()
+    await userEvent.click(button)
+
+    await waitFor(()=>{
+      const articles = screen.getAllByRole("article")
+      expect(articles.length).toBe(favourites.length);
+      expect(articles[0]).toHaveTextContent(new RegExp(favourites[0].name))
+
+    })
+
+
   });
 });

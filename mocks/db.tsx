@@ -40,3 +40,8 @@ export async function getFavouriteById(uid: string): Promise<favourite | undefin
   const db = await getDB();
   return (await db.get(STORE_NAME, uid)) as favourite;
 }
+
+export async function clearFavourites(): Promise<void> {
+  const db = await getDB();
+  await db.clear(STORE_NAME);
+}
