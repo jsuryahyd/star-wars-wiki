@@ -9,8 +9,8 @@ import {
   Outlet,
 } from "@tanstack/react-router";
 import { Provider } from "@/components/ui/provider";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
+import { QueryCache, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { toaster, Toaster } from "@/components/ui/toaster";
 
 const customRender = (
   ui: React.ReactElement,
@@ -65,6 +65,13 @@ const customRender = (
         retry: false,
       },
     },
+     queryCache: new QueryCache({
+        onError: (err, query)=>{
+          if(query.meta?.errorMessage){
+            toaster.error({description: query.meta.errorMessage})
+          }
+        }
+      })
   });
 
   const Wrapper = ({ children }: { children: React.ReactNode }) => (

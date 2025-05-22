@@ -86,11 +86,10 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
   }
 
   if (error) {
-    console.error("Error loading character details:", error);
     return (
-      <Box justify="center" align="center" height="60vh">
+      <Box  height="60vh" justifyContent={'center'} alignItems={'center'}  flexDirection={"column"}>
         <Text color="red.500">Error loading character details</Text>
-        <Button mt={4} onClick={() => router.navigate({ to: "/characters" })}>
+        <Button mt={4} onClick={() => router.navigate({ to: "/characters-list" })}>
           Go Back
         </Button>
       </Box>

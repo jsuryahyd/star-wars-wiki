@@ -14,7 +14,7 @@ const routes = [
     component: CharacterDetailsPage,
   },
   {
-    path: "/characters",
+    path: "/characters-list",
     component: () => <div>{charactersPageContent}</div>,
   },
 ];
@@ -340,32 +340,37 @@ describe("CharacterDetailsPage", () => {
         }
       )
     );
-    // const { router } = render(<CharacterDetailsPage />, { routes });
-    // await act(() => {
-    //   router.navigate({
-    //     to: "/character-details/1",
-    //   });
-    // });
-    // let detailsSection:HTMLElement
-    // await waitFor(() => {
-    //   expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
-    //   expect(detailsSection = screen.getByRole('region', {name: /character details/i})).toBeInTheDocument()
-    // });
-    // const homePlanetDetails = within(detailsSection).getByTestId("home-world");
-    // expect(
-    //   within(homePlanetDetails).getByText("Home World")
-    // ).toBeInTheDocument();
 
-    // //the implementation first renders sections, without dtails like homoworld name, etc. these details will load with separate apis
-    // await waitFor(() => {
-    //   const planetDetails = mockPlanetResponse({ id: characterId });
-    //   expect(
-    //     within(homePlanetDetails).getByText(
-    //       planetDetails.result.properties.name
-    //     )
-    //   ).toBeInTheDocument();
-    // });
-    await errorAssertions();
+    const characterId = 1
+    const { router } = render(<CharacterDetailsPage />, { routes });
+    await act(() => {
+      router.navigate({
+        to: "/character-details/"+characterId,
+      });
+    });
+    // await errorAssertions();
+    let detailsSection:HTMLElement
+    await waitFor(() => {
+      expect(screen.queryByRole("progressbar")).not.toBeInTheDocument();
+      expect(detailsSection = screen.getByRole('region', {name: /character details/i})).toBeInTheDocument()
+    });
+    const homePlanetDetails = within(detailsSection!).getByTestId("home-world");
+    expect(
+      within(homePlanetDetails).getByText("Home World")
+    ).toBeInTheDocument();
+
+    //the implementation first renders sections, without dtails like homoworld name, etc. these details will load with separate apis
+    expect(
+      within(homePlanetDetails).getByText(
+        // planetDetails.result.properties.name
+        "Unknown"
+      )
+    ).toBeInTheDocument();
+    await waitFor(() => {
+      const toast = screen.getByRole('status')
+      expect(within(toast).getByText(/Failed to load Home world Queries/i)).toBeInTheDocument()
+    });
+
   });
 
   test("shows error message when films api fails", async () => {
@@ -414,6 +419,6 @@ async function errorAssertions() {
 
   await waitFor(() => {
     expect(screen.getByText(charactersPageContent)).toBeInTheDocument();
-    expect(router.latestLocation.pathname.includes("/characters")).toBe(true);
+    expect(router.latestLocation.pathname.includes("/characters-list")).toBe(true);
   });
 }

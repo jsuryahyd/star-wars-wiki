@@ -2,9 +2,9 @@
 import { Provider as ChakraProvider } from "@/components/ui/provider"
 import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { routeTree } from './routes'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { Toaster } from "./components/ui/toaster"
+import { toaster, Toaster } from "./components/ui/toaster"
 
 
 
@@ -20,6 +20,13 @@ const queryClient = new QueryClient({
       retry: false,
     },
   },
+  queryCache: new QueryCache({
+    onError: (err, query)=>{
+      if(query.meta?.errorMessage){
+        toaster.error({description: query.meta.errorMessage})
+      }
+    }
+  })
 })
 function App() {
 

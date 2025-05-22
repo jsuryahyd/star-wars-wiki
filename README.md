@@ -82,6 +82,8 @@
 - Troubleshooting typescript, eslint configs, and test failures.
 
 ## Testing Reports
+
+
 ![Tests Passing Locally](docs/tests-passing.png)
 *Tests Passing Locally*
 
@@ -89,11 +91,11 @@
 *Coverage Report*
 
 ## TODOs
-- Improve quality of tests, by breaking scenarios in to multiple tests, with different msw response mocks in each test (`server.use()`)
+- ~~Improve quality of tests, by breaking scenarios in to multiple tests, with different msw response mocks in each test (`server.use()`)~~
 - ~~Find workaround for flaky snapshot tests.~~
-- Find solution for flaky tests that use `server.use()`: server.use() precedes over default handler when test runs in isolation, but not in group.
+- ~~Find solution for flaky tests that use `server.use()`: server.use() precedes over default handler when test runs in isolation, but not in group.~~ donot see the issue anymore. Will investigate if found again.
 - ~~Fix CI/CD pipeline~~
-- Generate Coverage Report (also as part of ci/cd pipeline)
+- ~~Generate Coverage Report (also as part of ci/cd pipeline)~~
 - ~~Add Toast messages when a put/post api call is succeeded. (adding/removing favourites)~~
 - ~~Implement "Undo" on put/post api calls. (within the toast, or within the card UI)~~
 - Replace Swapi.dev with Swapi.info for cleaner api structure
@@ -104,10 +106,21 @@
 ## Deployment Steps
 - Being Deployed to github pages at https://jsuryahyd.github.io/star-wars-wiki
 - CI/CD pipeline added at ./github/workflows/ci.yaml
-- Deploy job in the ci.yml will build and commit the dist folder to `gh-pages` branch. In Github repo -> settings -> pages -> set deploy from "branch" and select `gh-pages`. This will publish the site.
+- Deploy job in the ci.yml will build on push of release branch and commit the dist folder to `gh-pages` branch. In Github repo -> settings -> pages -> set deploy from "branch" and select `gh-pages`. This will publish the site.
 
 ## Local Development
 - Clone the repo
 - Install node version 20+
 - npm install
 - npm run dev
+
+
+## Useful Tips
+### Run github ci locally
+- use act-cli for running github actions (requires docker to be running)
+	`act --list` in project root directory
+	`act -j {jobID}` will run the job in local docker container.
+
+### Compress images with imagemin (npm)
+- compress-images branch has imagemin packages installed. The package can be used in cli to compress or convert images to webp.
+

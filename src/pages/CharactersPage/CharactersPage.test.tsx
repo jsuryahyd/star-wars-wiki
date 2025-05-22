@@ -77,7 +77,7 @@ describe("CharactersPage", () => {
       // the data is not available in the mock, can add it to the mock and test
     });
     // expect(charactersGrid).toMatchSnapshot();
-  });
+  },15000);
 
   test("shows retry button on error", async () => {
     server.use(

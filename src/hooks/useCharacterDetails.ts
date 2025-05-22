@@ -49,6 +49,10 @@ export default function useCharacterDetails(id: string) {
       return null;
     },
     enabled: !!characterDetails?.homeworld,
+    meta: {
+      errorMessage: "Failed to load Home world Queries"
+    },
+    retry: 1
   });
   const randomMovies = useMemo(() => {
     return randomItemsFrom([
@@ -143,12 +147,15 @@ export default function useCharacterDetails(id: string) {
   const anyFilmError = filmQueries.some((q) => q.error);
   const anyStarshipError = starshipQueries.some((q) => q.error);
 
+  const areFilmsLoading = filmQueries.some(q=>q.isLoading)
+  const areStarsShipsLoading = filmQueries.some(q=>q.isLoading)
+
   return {
     characterDetails: error ? null : characterDetails,
     error:
-      error || homeWorldQuery.error || 
+      error || 
       (anyFilmError ? "One or more films failed to load" : null) ||
       (anyStarshipError ? "One or more starships failed to load" : null), //todo: donot hide whole content for planet, films and starship api errors
-    isLoading,
+    isLoading: isLoading || areFilmsLoading || areStarsShipsLoading,
   };
 }
